@@ -1,7 +1,5 @@
 <template>
-  <div
-    :class="`relative border border-${borderColor} border-opacity-${borderOpacity} p-2`"
-  >
+  <div :class="`relative border ${borderClasses} p-2`">
     <slot />
     <div class="dot-container left-0 top-0">
       <span :class="`dot bg-${dotColor} bg-opacity-${dotOpacity}`"></span>
@@ -25,6 +23,11 @@ export default {
     borderOpacity: { type: Number, default: 100 },
     dotColor: { type: String, default: 'primary' },
     dotOpacity: { type: Number, default: 100 },
+  },
+  computed: {
+    borderClasses() {
+      return `border-${this.borderColor} border-opacity-${this.borderOpacity}`
+    },
   },
 }
 </script>

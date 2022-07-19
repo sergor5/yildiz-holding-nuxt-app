@@ -3,6 +3,7 @@
     <DottedBordersWrapper
       dotColor="white"
       borderColor="white"
+      :borderOpacity="50"
       class="mb-10 active:scale-95 transition-transform"
     >
       <ActionButton> HEMEN BAŞVUR </ActionButton>

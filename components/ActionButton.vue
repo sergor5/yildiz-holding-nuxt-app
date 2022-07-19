@@ -24,4 +24,9 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
 </style>
