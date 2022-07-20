@@ -39,6 +39,7 @@ export default {
 <style lang="scss" scoped>
 .dot-border {
   width: fit-content;
+  height: fit-content;
   .dot-container {
     @apply absolute w-0 h-0 grid place-items-center;
     .dot {
