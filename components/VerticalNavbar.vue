@@ -74,7 +74,7 @@
             />
           </svg>
         </div>
-        MENU
+        <div class="font-semibold">MENU</div>
       </div>
       <nav class="relative w-0 flex justify-end">
         <ul class="absolute text-white whitespace-nowrap">
