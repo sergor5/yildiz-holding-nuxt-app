@@ -1,17 +1,17 @@
 <template>
-  <div :class="`relative border ${borderClasses} p-2`">
+  <div :class="`relative border ${borderColor} p-2`" :style="cssVars">
     <slot />
     <div class="dot-container left-0 top-0">
-      <span :class="`dot bg-${dotColor} bg-opacity-${dotOpacity}`"></span>
+      <span :class="`dot ${dotColor}`"></span>
     </div>
     <div class="dot-container right-0 top-0">
-      <span :class="`dot bg-${dotColor} bg-opacity-${dotOpacity}`"></span>
+      <span :class="`dot ${dotColor}`"></span>
     </div>
     <div class="dot-container left-0 bottom-0">
-      <span :class="`dot bg-${dotColor} bg-opacity-${dotOpacity}`"></span>
+      <span :class="`dot ${dotColor}`"></span>
     </div>
     <div class="dot-container right-0 bottom-0">
-      <span :class="`dot bg-${dotColor} bg-opacity-${dotOpacity}`"></span>
+      <span :class="`dot ${dotColor}`"></span>
     </div>
   </div>
 </template>
@@ -19,14 +19,15 @@
 <script>
 export default {
   props: {
-    borderColor: { type: String, default: 'primary' },
-    borderOpacity: { type: Number, default: 100 },
-    dotColor: { type: String, default: 'primary' },
-    dotOpacity: { type: Number, default: 100 },
+    borderColor: { type: String, default: 'border-primary' },
+    borderOpacity: { type: Number, default: 1 },
+    dotColor: { type: String, default: 'bg-primary' },
   },
   computed: {
-    borderClasses() {
-      return `border-${this.borderColor} border-opacity-${this.borderOpacity}`
+    cssVars() {
+      return {
+        '--tw-border-opacity': this.borderOpacity,
+      }
     },
   },
 }

@@ -1,9 +1,9 @@
 <template>
   <div class="container mx-auto grid place-items-center h-64 bg-gray-700 pt-10">
     <DottedBordersWrapper
-      dotColor="white"
-      borderColor="white"
-      :borderOpacity="50"
+      dotColor="bg-white"
+      borderColor="border-white"
+      :borderOpacity="0.6"
       class="mb-10 active:scale-95 transition-transform"
     >
       <ActionButton> HEMEN BAŞVUR </ActionButton>
