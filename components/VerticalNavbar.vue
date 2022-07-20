@@ -78,18 +78,14 @@
       </div>
       <nav class="relative w-0 flex justify-end">
         <ul class="absolute text-white whitespace-nowrap">
-          <li class="nav-item active"><a href="#about">HAKKINDA</a></li>
-          <li class="nav-item"><a href="#program">PROGRAM</a></li>
-          <li class="nav-item">
-            <a href="#who-can-join">KİMLER KATILABİLİR?</a>
+          <li
+            v-for="item in navItems"
+            class="nav-item"
+            :class="{ active: item.id == selectedId }"
+            :key="item.id"
+          >
+            <a :href="item.url" @click="selectItem(item.id)">{{ item.text }}</a>
           </li>
-          <li class="nav-item">
-            <a href="#what-will-i-win">NELER KAZANACAĞIM?</a>
-          </li>
-          <li class="nav-item">
-            <a href="#application-process">BAŞVURU SÜREÇLERİ</a>
-          </li>
-          <li class="nav-item"><a href="#faq">SIKÇA SORULAN SORULAR</a></li>
         </ul>
       </nav>
     </div>
@@ -165,12 +161,33 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      selectedId: 0,
+      navItems: [
+        { id: 0, text: 'HAKKINDA', url: '#about' },
+        { id: 1, text: 'PROGRAM', url: '#program' },
+        { id: 2, text: 'KİMLER KATILABİLİR?', url: '#who-can-join' },
+        { id: 3, text: 'NELER KAZANACAĞIM?', url: '#what-will-i-win' },
+        { id: 4, text: 'BAŞVURU SÜREÇLERİ', url: '#application-process' },
+        { id: 5, text: 'SIKÇA SORULAN SORULAR', url: '#faq' },
+      ],
+    }
+  },
+  methods: {
+    selectItem(id) {
+      this.selectedId = id
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .nav-item {
-  @apply pr-3 py-2 flex justify-end items-center transition-all hover:pr-4 hover:font-bold;
+  @apply pr-3 py-2 flex justify-end items-center transition-all hover:pr-4 font-light hover:font-bold;
+
+  letter-spacing: 0.3rem;
 
   &::after {
     content: '';
@@ -180,9 +197,12 @@ export default {}
     right: -5px;
     @apply border border-white;
   }
-
   &.active::after {
     @apply bg-primary border-none;
+  }
+
+  &:not(.active):hover::after {
+    @apply bg-white;
   }
 }
 </style>
