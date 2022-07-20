@@ -1,5 +1,8 @@
 <template>
-  <div :class="`relative border ${borderColor} p-2`" :style="cssVars">
+  <div
+    :class="`dot-border relative border ${borderColor} p-2 w-fit`"
+    :style="cssVars"
+  >
     <slot />
     <div class="dot-container left-0 top-0">
       <span :class="`dot ${dotColor}`"></span>
@@ -34,10 +37,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dot-container {
-  @apply absolute w-0 h-0 grid place-items-center;
-  .dot {
-    @apply absolute w-2.5 h-2.5;
+.dot-border {
+  width: fit-content;
+  .dot-container {
+    @apply absolute w-0 h-0 grid place-items-center;
+    .dot {
+      @apply absolute w-2.5 h-2.5;
+    }
   }
 }
 </style>
