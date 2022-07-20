@@ -9,6 +9,7 @@
         min-h-screen
       "
     >
+      <Logo class="absolute left-0 top-0" />
       <div class="flex justify-center w-full relative top-7">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -6,12 +6,12 @@
       right-8
       flex flex-col
       justify-between
-      divide-y divide-white divide-opacity-30
+      divide-y divide-white divide-opacity-40
       h-3/5
       w-24
-      bg-primary bg-opacity-40
-      backdrop-blur-lg
-      border border-white border-opacity-30
+      bg-primary bg-opacity-20
+      backdrop-blur-sm
+      border border-white border-opacity-40
     "
   >
     <div>
