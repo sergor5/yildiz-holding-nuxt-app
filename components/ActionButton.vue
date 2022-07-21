@@ -5,7 +5,7 @@
       py-5
       bg-primary
       text-white
-      font-bold
+      font-black
       text-3xl
       hover:bg-primary-hover
       active:bg-primary-active

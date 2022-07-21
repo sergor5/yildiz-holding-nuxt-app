@@ -1,7 +1,6 @@
 <template>
   <div class="h-[5000px] bg-gray-700">
     <section
-      id="about"
       class="
         main-section
         relative
@@ -49,6 +48,7 @@
               flex
               justify-center
             "
+            style="width: fit-content"
           >
             <p class="w-[458px] text-2xl font-medium">
               Apply to our award-winning JOB Young Talent Program for
@@ -115,9 +115,71 @@
         Some content to display
       </div>
     </DottedBordersWrapper>
-    <div class="bg-green-400 w-32 h-12 absolute z-0">Text</div> -->
+    -->
+    <section id="about" class="bg-white">
+      <div class="mx-auto py-24 flex flex-col items-center">
+        <h2 class="text-center text-6xl font-extrabold text-red-900 mb-7">
+          JOB@YıldızHolding<br />
+          NEDİR?
+        </h2>
+        <DottedBordersWrapper :borderOpacity="0.6" class="w-3/5">
+          <p class="text-center text-red-900 p-10 text-3xl">
+            JOB@YıldızHolding, tam 11 yıldır gelişimine ve kariyerine yön
+            vermeye, global bir şirket kültürünü deneyimlemeye ve kariyer
+            fırsatlarını yakalamaya hevesli tüm genç yeteneklerin buluşma
+            noktası olan staj ve işe alım programıdır!
+          </p>
+        </DottedBordersWrapper>
+      </div>
+    </section>
     <section id="program">PROGRAM</section>
-    <section id="who-can-join">KİMLER KATILABİLİR?</section>
+    <section
+      id="who-can-join"
+      class="w-full bg-cover bg-center bg-no-repeat p-48"
+    >
+      <div class="flex w-3/5 mx-auto gap-6">
+        <div class="">
+          <div
+            class="
+              w-40
+              h-40
+              bg-white bg-opacity-10
+              backdrop-blur-sm
+              grid
+              place-items-center
+            "
+          >
+            <QuestionBubbleIcon class="w-24 h-24" />
+          </div>
+        </div>
+        <div class="flex flex-col justify-center">
+          <h2 class="text-6xl font-extrabold" style="line-height: 1.3">
+            KİMLER<br />KATILABİLİR?
+          </h2>
+          <DottedBordersWrapper
+            borderColor="border-white"
+            dotColor="bg-white"
+            class="bg-white bg-opacity-10 backdrop-blur-sm text-4xl p-10"
+          >
+            Üniversite 3. Sınıf, 4. Sınıf veya Yüksek Lisans programlarında
+            öğrenim gören ve kariyerine parlak bir şirkette yön vermek isteyen
+            öğrenciler ve yeni mezunlar.
+            <span class="absolute z-10 h-0 bottom-6 -right-32">
+              <DottedBordersWrapper
+                dotColor="bg-white"
+                borderColor="border-white"
+                :borderOpacity="0.6"
+                class="active:scale-95 transition-transform"
+              >
+                <ActionButton class="whitespace-nowrap"
+                  >HEMEN BAŞVUR</ActionButton
+                >
+              </DottedBordersWrapper>
+            </span>
+          </DottedBordersWrapper>
+        </div>
+      </div>
+    </section>
     <section id="what-will-i-win">NELER KAZANACAĞIM?</section>
     <section id="application-process">BAŞVURU SÜREÇLERİ</section>
     <section id="faq">SIKÇA SORULAN SORULAR</section>
@@ -133,6 +195,9 @@ export default {
 <style lang="scss" scoped>
 .main-section {
   background-image: url('~assets/images/BG.png');
+}
+#who-can-join {
+  background-image: url('~assets/images/who-can-join-bg.png');
 }
 section {
   color: white;
