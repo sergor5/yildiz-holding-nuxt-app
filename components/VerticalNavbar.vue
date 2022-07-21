@@ -26,7 +26,7 @@
           <li
             v-for="item in navItems"
             class="nav-item"
-            :class="{ active: item.id == selectedId }"
+            :class="{ 'active font-bold': item.id == selectedId }"
             :key="item.id"
           >
             <a :href="item.url" @click="selectItem(item.id)">{{ item.text }}</a>
@@ -116,7 +116,7 @@ export default {
 
 <style lang="scss" scoped>
 .nav-item {
-  @apply pr-3 py-2 flex justify-end items-center transition-all hover:pr-4 font-light hover:font-bold;
+  @apply pr-3 py-2 flex justify-end items-center transition-all hover:pr-4;
 
   letter-spacing: 0.3rem;
 
@@ -134,6 +134,12 @@ export default {
 
   &:not(.active):hover::after {
     @apply bg-white;
+  }
+  &:not(.active) {
+    @apply font-light;
+    :hover {
+      @apply font-bold;
+    }
   }
 }
 </style>
