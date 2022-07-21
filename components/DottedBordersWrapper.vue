@@ -1,20 +1,28 @@
 <template>
   <div
-    :class="`dot-border relative border ${borderColor} p-2 w-fit`"
+    :class="`dot-border relative border ${borderColor} p-2`"
     :style="cssVars"
   >
     <slot />
     <div class="dot-container left-0 top-0">
-      <span :class="`dot ${dotColor}`"></span>
+      <slot name="top-left">
+        <span :class="`dot ${dotColor}`"></span>
+      </slot>
     </div>
     <div class="dot-container right-0 top-0">
-      <span :class="`dot ${dotColor}`"></span>
+      <slot name="top-right">
+        <span :class="`dot ${dotColor}`"></span>
+      </slot>
     </div>
     <div class="dot-container left-0 bottom-0">
-      <span :class="`dot ${dotColor}`"></span>
+      <slot name="bottom-left">
+        <span :class="`dot ${dotColor}`"></span>
+      </slot>
     </div>
     <div class="dot-container right-0 bottom-0">
-      <span :class="`dot ${dotColor}`"></span>
+      <slot name="bottom-right">
+        <span :class="`dot ${dotColor}`"></span>
+      </slot>
     </div>
   </div>
 </template>

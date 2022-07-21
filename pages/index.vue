@@ -1,13 +1,99 @@
 <template>
-  <div class="container mx-auto grid place-items-center h-64 bg-gray-700 pt-10">
-    <DottedBordersWrapper
-      dotColor="bg-white"
-      borderColor="border-white"
-      :borderOpacity="0.6"
-      class="mb-10 active:scale-95 transition-transform"
+  <div class="h-[5000px] bg-gray-700">
+    <section
+      id="about"
+      class="
+        main-section
+        relative
+        w-full
+        bg-cover bg-center bg-no-repeat
+        min-h-screen
+      "
     >
-      <ActionButton> HEMEN BAŞVUR </ActionButton>
-    </DottedBordersWrapper>
+      <Logo class="absolute left-0 top-0" />
+      <div class="flex justify-center w-full relative top-7">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="663"
+          height="430"
+          viewBox="0 0 663 430"
+          class=""
+        >
+          <defs>
+            <pattern
+              id="pattern"
+              preserveAspectRatio="none"
+              width="100%"
+              height="100%"
+              viewBox="0 0 588 381"
+            >
+              <image width="588" height="381" href="~assets/images/badge.png" />
+            </pattern>
+          </defs>
+          <rect id="badge" width="663" height="430" fill="url(#pattern)" />
+        </svg>
+      </div>
+      <div class="absolute w-full flex flex-col bottom-20">
+        <div class="mb-14">
+          <DottedBordersWrapper
+            dotColor="bg-white"
+            borderColor="border-white"
+            :borderOpacity="0.6"
+            class="
+              absolute
+              left-20
+              p-5
+              bg-primary bg-opacity-10
+              backdrop-blur-sm
+              flex
+              justify-center
+            "
+          >
+            <p class="w-[458px] text-2xl font-medium">
+              Apply to our award-winning JOB Young Talent Program for
+              recruitment (new graduate), internship and development
+              opportunities in a global company with new working models!
+            </p>
+          </DottedBordersWrapper>
+        </div>
+        <div
+          class="
+            flex
+            justify-between
+            ml-auto
+            mr-48
+            border border-white border-opacity-30
+          "
+          style="width: 72%"
+        >
+          <DottedBordersWrapper
+            dotColor="bg-white"
+            borderColor="border-white"
+            :borderOpacity="0.6"
+          >
+            <template #top-left>
+              <CalendarIcon class="absolute bottom-0 right-0" />
+            </template>
+            <div class="text-white text-center px-4 py-1.5">
+              <p class="text-xl">SON KATILIM TARİHİ</p>
+              <p class="drop-shadow-glow text-3xl font-black">10.04.2022</p>
+            </div>
+          </DottedBordersWrapper>
+
+          <DottedBordersWrapper
+            dotColor="bg-white"
+            borderColor="border-white"
+            :borderOpacity="0.6"
+            class="active:scale-95 transition-transform"
+          >
+            <ActionButton> HEMEN BAŞVUR </ActionButton>
+          </DottedBordersWrapper>
+        </div>
+      </div>
+    </section>
+    <VerticalNavbar />
+    <!--
     <DottedBordersWrapper
       dotColor="white"
       borderColor="white"
@@ -29,7 +115,12 @@
         Some content to display
       </div>
     </DottedBordersWrapper>
-    <!-- <div class="bg-green-400 w-32 h-12 absolute z-0">Text</div> -->
+    <div class="bg-green-400 w-32 h-12 absolute z-0">Text</div> -->
+    <section id="program">PROGRAM</section>
+    <section id="who-can-join">KİMLER KATILABİLİR?</section>
+    <section id="what-will-i-win">NELER KAZANACAĞIM?</section>
+    <section id="application-process">BAŞVURU SÜREÇLERİ</section>
+    <section id="faq">SIKÇA SORULAN SORULAR</section>
   </div>
 </template>
 
@@ -38,3 +129,12 @@ export default {
   name: 'IndexPage',
 }
 </script>
+
+<style lang="scss" scoped>
+.main-section {
+  background-image: url('~assets/images/BG.png');
+}
+section {
+  color: white;
+}
+</style>
