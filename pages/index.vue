@@ -233,8 +233,90 @@
         dotColor="bg-white"
         class="bg-white bg-opacity-10 backdrop-blur-sm text-4xl p-10 w-4/6"
       >
-        <form action="">
-          <input type="text" name="" id="" />
+        <form action="" class="mb-10">
+          <div class="grid grid-cols-2 gap-x-3 gap-y-4">
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="İsim Soyisim"
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="Doğum Yılı - Gün & Ay & Yıl"
+            />
+            <input
+              type="tel"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="Telefon"
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="Beklenen Mezuniyet Tarihi - Ay & Yıl"
+            />
+            <input
+              type="email"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="E-posta"
+            />
+            <select name="" id="" class="px-4 py-3 placeholder-secondary">
+              <option value="">Departman 1</option>
+              <option value="">Departman 1.a</option>
+              <option value="">Departman 1.b</option>
+            </select>
+            <select name="" id="" class="px-4 py-3 placeholder-secondary">
+              <option value="">Üniversite</option>
+              <option value="">İstanbul Aydın Üniversitesi</option>
+              <option value="">Boğaziçi Üniversitesi</option>
+              <option value="">Lorem Ipsum Üniversitesi</option>
+              <option value="">Dolar Sit Amet Üniversitesi</option>
+              <option value="">İstanbul Aydın Üniversitesi</option>
+              <option value="">Boğaziçi Üniversitesi</option>
+              <option value="">Lorem Ipsum Üniversitesi</option>
+              <option value="">Dolar Sit Amet Üniversitesi</option>
+            </select>
+            <select name="" id="" class="px-4 py-3 placeholder-secondary">
+              <option value="">Departman 2</option>
+              <option value="">Departman 2.a</option>
+              <option value="">Departman 2.b</option>
+            </select>
+
+            <select name="" id="" class="px-4 py-3 placeholder-secondar">
+              <option value="">Bölüm (Yüksek Lisans Dahil)</option>
+              <option value="">Mühendislik</option>
+              <option value="">Güzel Sanatlar</option>
+            </select>
+            <select
+              name=""
+              id="dep_3"
+              class="w-full h-full placeholder-secondary"
+            >
+              <option value="">Departman 3</option>
+              <option value="">Departman 3.a</option>
+              <option value="">Departman 3.b</option>
+              <div class="absolute bottom-0">
+                Öncelik sıranıza göre ve 3 adet departman belirtiniz.
+              </div>
+            </select>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="Sınıf"
+            />
+          </div>
         </form>
         <div
           class="
