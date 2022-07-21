@@ -50,7 +50,7 @@
             "
             style="width: fit-content"
           >
-            <p class="w-[458px] text-2xl font-medium">
+            <p class="w-[458px] text-2xl font-medium text-white">
               Apply to our award-winning JOB Young Talent Program for
               recruitment (new graduate), internship and development
               opportunities in a global company with new working models!
@@ -132,7 +132,12 @@
         </DottedBordersWrapper>
       </div>
     </section>
-    <section id="program">PROGRAM</section>
+    <section
+      id="program"
+      class="w-full bg-cover bg-center bg-no-repeat p-48 py-96 text-black"
+    >
+      PROGRAM
+    </section>
     <section
       id="who-can-join"
       class="w-full bg-cover bg-center bg-no-repeat p-48"
@@ -152,7 +157,7 @@
             <QuestionBubbleIcon class="w-24 h-24" />
           </div>
         </div>
-        <div class="flex flex-col justify-center">
+        <div class="flex flex-col justify-center text-white">
           <h2 class="text-6xl font-extrabold" style="line-height: 1.3">
             KİMLER<br />KATILABİLİR?
           </h2>
@@ -183,6 +188,30 @@
     <section id="what-will-i-win">NELER KAZANACAĞIM?</section>
     <section id="application-process">BAŞVURU SÜREÇLERİ</section>
     <section id="faq">SIKÇA SORULAN SORULAR</section>
+    <footer
+      class="
+        h-40
+        bg-primary
+        w-full
+        flex
+        justify-between
+        items-center
+        text-white
+        px-8
+      "
+    >
+      <div class="flex items-center text-5xl font-bold gap-2">
+        YILDIZ<span><StarIcon /></span> HOLDING
+      </div>
+      <div class="flex items-center">
+        <div class="grid place-items-center p-5">
+          <LinkedinIcon class="fill-current text-white" />
+        </div>
+        <div class="grid place-items-center p-5">
+          <InstagramIcon class="fill-current text-white" />
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -196,10 +225,10 @@ export default {
 .main-section {
   background-image: url('~assets/images/BG.png');
 }
+#program {
+  background-image: url('~assets/images/program-bg.png');
+}
 #who-can-join {
   background-image: url('~assets/images/who-can-join-bg.png');
-}
-section {
-  color: white;
 }
 </style>
