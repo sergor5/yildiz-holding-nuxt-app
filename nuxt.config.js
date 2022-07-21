@@ -2,6 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  server: {
+    host: '0.0.0.0',
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'yildiz-holding-nuxt-app',
@@ -24,7 +28,12 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
