@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[5000px] bg-gray-700">
+  <div class="h-[5000px] bg-gray-300">
     <section
       class="
         main-section
@@ -185,7 +185,38 @@
         </div>
       </div>
     </section>
-    <section id="what-will-i-win">NELER KAZANACAĞIM?</section>
+    <section
+      id="what-will-i-win"
+      class="w-full bg-cover bg-center bg-no-repeat p-32"
+    >
+      <div class="flex w-4/5 gap-6">
+        <div class="">
+          <div class="w-40 h-40 bg-white grid place-items-center">
+            <HandIcon class="w-24 h-24 fill-current text-primary" />
+          </div>
+        </div>
+        <div class="flex flex-col justify-center">
+          <h2
+            class="text-6xl font-extrabold text-secondary"
+            style="line-height: 1.3"
+          >
+            NELER <br />KAZANACAĞIM?
+          </h2>
+          <p class="text-primary text-4xl font-medium pl-20 w-5/6">
+            Kariyerine güçlü bir başlangıç yapmak için ihtiyacın olacak tüm
+            gelişim alanları!
+          </p>
+        </div>
+      </div>
+      <div class="w-full flex justify-end items-center mt-4">
+        <p class="text-secondary text-base font-semibold">
+          KAZANÇLARIN DEVAMINI GÖRMEK İÇİN KAYDIR
+        </p>
+        <span class="inline-block ml-3"
+          ><RightArrowIcon class="stroke-current text-primary"
+        /></span>
+      </div>
+    </section>
     <section id="application-process">BAŞVURU SÜREÇLERİ</section>
     <section id="faq">SIKÇA SORULAN SORULAR</section>
   </div>
@@ -206,5 +237,8 @@ export default {
 }
 #who-can-join {
   background-image: url('~assets/images/who-can-join-bg.png');
+}
+#what-will-i-win {
+  background-image: url('~assets/images/what-will-i-win-bg.png');
 }
 </style>
