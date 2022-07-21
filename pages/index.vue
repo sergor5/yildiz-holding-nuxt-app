@@ -1,6 +1,7 @@
 <template>
   <div class="h-[5000px] bg-gray-700">
-    <div
+    <section
+      id="about"
       class="
         main-section
         relative
@@ -33,28 +34,64 @@
           <rect id="badge" width="663" height="430" fill="url(#pattern)" />
         </svg>
       </div>
-      <div class="absolute w-full flex justify-around bottom-20">
-        <DottedBordersWrapper
-          dotColor="bg-white"
-          borderColor="border-white"
-          :borderOpacity="0.6"
+      <div class="absolute w-full flex flex-col bottom-20">
+        <div class="mb-14">
+          <DottedBordersWrapper
+            dotColor="bg-white"
+            borderColor="border-white"
+            :borderOpacity="0.6"
+            class="
+              absolute
+              left-20
+              p-5
+              bg-primary bg-opacity-10
+              backdrop-blur-sm
+              flex
+              justify-center
+            "
+          >
+            <p class="w-[458px] text-2xl font-medium">
+              Apply to our award-winning JOB Young Talent Program for
+              recruitment (new graduate), internship and development
+              opportunities in a global company with new working models!
+            </p>
+          </DottedBordersWrapper>
+        </div>
+        <div
+          class="
+            flex
+            justify-between
+            ml-auto
+            mr-48
+            border border-white border-opacity-30
+          "
+          style="width: 72%"
         >
-          <div class="text-white text-center px-4 py-1.5">
-            <p class="text-xl">SON KATILIM TARİHİ</p>
-            <p class="drop-shadow-glow text-3xl font-black">10.04.2022</p>
-          </div>
-        </DottedBordersWrapper>
+          <DottedBordersWrapper
+            dotColor="bg-white"
+            borderColor="border-white"
+            :borderOpacity="0.6"
+          >
+            <template #top-left>
+              <CalendarIcon class="absolute bottom-0 right-0" />
+            </template>
+            <div class="text-white text-center px-4 py-1.5">
+              <p class="text-xl">SON KATILIM TARİHİ</p>
+              <p class="drop-shadow-glow text-3xl font-black">10.04.2022</p>
+            </div>
+          </DottedBordersWrapper>
 
-        <DottedBordersWrapper
-          dotColor="bg-white"
-          borderColor="border-white"
-          :borderOpacity="0.6"
-          class="mb-10 active:scale-95 transition-transform"
-        >
-          <ActionButton> HEMEN BAŞVUR </ActionButton>
-        </DottedBordersWrapper>
+          <DottedBordersWrapper
+            dotColor="bg-white"
+            borderColor="border-white"
+            :borderOpacity="0.6"
+            class="active:scale-95 transition-transform"
+          >
+            <ActionButton> HEMEN BAŞVUR </ActionButton>
+          </DottedBordersWrapper>
+        </div>
       </div>
-    </div>
+    </section>
     <VerticalNavbar />
     <!--
     <DottedBordersWrapper
@@ -79,7 +116,6 @@
       </div>
     </DottedBordersWrapper>
     <div class="bg-green-400 w-32 h-12 absolute z-0">Text</div> -->
-    <section id="about">HAKKIMIZDA</section>
     <section id="program">PROGRAM</section>
     <section id="who-can-join">KİMLER KATILABİLİR?</section>
     <section id="what-will-i-win">NELER KAZANACAĞIM?</section>
