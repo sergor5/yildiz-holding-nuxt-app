@@ -92,7 +92,7 @@
         </div>
       </div>
     </section>
-    <VerticalNavbar />
+    <VerticalNavbar class="z-50" />
     <!--
     <DottedBordersWrapper
       dotColor="white"
