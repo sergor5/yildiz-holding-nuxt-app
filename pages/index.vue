@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[5000px] bg-gray-300">
+  <div class="min-h-[5000px] bg-gray-300">
     <section
       class="
         main-section
@@ -217,7 +217,20 @@
         /></span>
       </div>
     </section>
-    <section id="application-process">BAŞVURU SÜREÇLERİ</section>
+    <section
+      id="application-process"
+      class="w-full h-96 bg-white flex flex-col items-center p-10 gap-4"
+    >
+      <h2
+        class="text-6xl font-extrabold text-secondary text-center"
+        style="line-height: 1.2"
+      >
+        BAŞVURU SÜREÇLERİ
+      </h2>
+      <p class="text-primary text-center text-4xl font-medium w-2/5">
+        Başvurmak ve bu kariyer fırsatını yakalamak için aşağıdaki butona tıkla!
+      </p>
+    </section>
     <section
       id="application-form"
       class="w-full flex flex-col items-center gap-4 px-10 pt-16 pb-36"
