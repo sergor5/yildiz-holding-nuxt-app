@@ -218,7 +218,54 @@
       </div>
     </section>
     <section id="application-process">BAŞVURU SÜREÇLERİ</section>
-    <section id="faq">SIKÇA SORULAN SORULAR</section>
+    <section
+      id="application-form"
+      class="w-full flex flex-col items-center gap-4 p-10"
+    >
+      <h2
+        class="text-6xl font-extrabold text-white text-center"
+        style="line-height: 1.2"
+      >
+        BAŞVURU FORMU
+      </h2>
+      <DottedBordersWrapper
+        borderColor="border-white"
+        dotColor="bg-white"
+        class="bg-white bg-opacity-10 backdrop-blur-sm text-4xl p-10 w-4/6"
+      >
+        <form action="">
+          <input type="text" name="" id="" />
+        </form>
+        <div
+          class="
+            absolute
+            bottom-0
+            w-full
+            z-10
+            h-0
+            flex
+            justify-center
+            items-center
+          "
+        >
+          <DottedBordersWrapper
+            :borderOpacity="0.6"
+            class="active:scale-95 transition-transform"
+          >
+            <ActionButton class="whitespace-nowrap">HEMEN BAŞVUR</ActionButton>
+          </DottedBordersWrapper>
+        </div>
+      </DottedBordersWrapper>
+    </section>
+    <section id="faq" class="w-full h-96 bg-white flex justify-center">
+      <h2
+        class="text-6xl font-extrabold text-primary text-center"
+        style="line-height: 1.2"
+      >
+        SIKÇA SORULAN<br />
+        SORULAR
+      </h2>
+    </section>
   </div>
 </template>
 
@@ -240,5 +287,8 @@ export default {
 }
 #what-will-i-win {
   background-image: url('~assets/images/what-will-i-win-bg.png');
+}
+#application-form {
+  background-image: url('~assets/images/application-form-bg.png');
 }
 </style>
