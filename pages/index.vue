@@ -220,7 +220,7 @@
     <section id="application-process">BAŞVURU SÜREÇLERİ</section>
     <section
       id="application-form"
-      class="w-full flex flex-col items-center gap-4 p-10"
+      class="w-full flex flex-col items-center gap-4 px-10 pt-16 pb-36"
     >
       <h2
         class="text-6xl font-extrabold text-white text-center"
@@ -322,6 +322,7 @@
           class="
             absolute
             bottom-0
+            left-0
             w-full
             z-10
             h-0
@@ -339,7 +340,7 @@
         </div>
       </DottedBordersWrapper>
     </section>
-    <section id="faq" class="w-full h-96 bg-white flex justify-center">
+    <section id="faq" class="w-full h-96 bg-white flex justify-center p-10">
       <h2
         class="text-6xl font-extrabold text-primary text-center"
         style="line-height: 1.2"
