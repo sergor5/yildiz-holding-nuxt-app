@@ -87,7 +87,9 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton> HEMEN BAŞVUR </ActionButton>
+            <ActionButton v-scroll-to="'#application-form'">
+              HEMEN BAŞVUR
+            </ActionButton>
           </DottedBordersWrapper>
         </div>
       </div>
@@ -218,7 +220,9 @@
                 :borderOpacity="0.6"
                 class="active:scale-95 transition-transform"
               >
-                <ActionButton class="whitespace-nowrap"
+                <ActionButton
+                  class="whitespace-nowrap"
+                  v-scroll-to="'#application-form'"
                   >HEMEN BAŞVUR</ActionButton
                 >
               </DottedBordersWrapper>
@@ -289,7 +293,7 @@
     </section>
     <section
       id="application-process"
-      class="w-full h-96 bg-white flex flex-col items-center p-10 gap-4"
+      class="w-full bg-white flex flex-col items-center p-10 pb-32 gap-4"
     >
       <h2
         class="text-6xl font-extrabold text-secondary text-center"
@@ -300,6 +304,54 @@
       <p class="text-primary text-center text-4xl font-medium w-2/5">
         Başvurmak ve bu kariyer fırsatını yakalamak için aşağıdaki butona tıkla!
       </p>
+      <div class="application-process-card bg-gray-100 relative h-96 w-4/5">
+        <div class="flex items-center h-full">
+          <div class="flex-1" v-for="i in [1, 2, 4]" :key="i + 'rand'">
+            <div class="relative">
+              <span
+                class="
+                  absolute
+                  w-20
+                  h-20
+                  grid
+                  place-items-center
+                  bg-primary
+                  left-10
+                  top-0
+                  -translate-y-1/2
+                "
+              >
+                <StarOutlineIcon />
+              </span>
+            </div>
+            <div class="w-24">Online Değerlendirme Aşamaları</div>
+          </div>
+        </div>
+        <div
+          class="
+            absolute
+            bottom-0
+            left-0
+            w-full
+            z-10
+            h-0
+            flex
+            justify-center
+            items-center
+          "
+        >
+          <DottedBordersWrapper
+            :borderOpacity="0.6"
+            class="active:scale-95 transition-transform"
+          >
+            <ActionButton
+              class="whitespace-nowrap"
+              v-scroll-to="'#application-form'"
+              >HEMEN BAŞVUR</ActionButton
+            >
+          </DottedBordersWrapper>
+        </div>
+      </div>
     </section>
     <section
       id="application-form"
@@ -519,5 +571,8 @@ export default {
 }
 #application-form {
   background-image: url('~assets/images/application-form-bg.png');
+}
+.application-process-card {
+  background-image: url('~assets/images/application-process-bg.png');
 }
 </style>
