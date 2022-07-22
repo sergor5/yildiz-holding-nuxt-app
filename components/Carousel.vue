@@ -66,4 +66,5 @@ export default {
 </script>
 
 <style lang="scss" >
+@import '@egjs/vue-flicking/dist/flicking.css';
 </style>
