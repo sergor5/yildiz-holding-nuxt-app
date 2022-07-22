@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-[5000px] bg-gray-300">
+  <div class="min-h-[5000px]">
     <section
       class="
         main-section
@@ -95,7 +95,10 @@
     <VerticalNavbar class="z-50" />
     <section id="about" class="bg-white">
       <div class="mx-auto py-24 flex flex-col items-center">
-        <h2 class="text-center text-6xl font-extrabold text-red-900 mb-7">
+        <h2
+          class="text-center text-6xl font-extrabold text-red-900 mb-7"
+          style="line-height: 1.3"
+        >
           JOB@YıldızHolding<br />
           NEDİR?
         </h2>
@@ -111,15 +114,24 @@
     </section>
     <section
       id="program"
-      class="w-full bg-cover bg-center bg-no-repeat py-32 text-black"
+      class="
+        w-full
+        bg-cover bg-center bg-no-repeat
+        py-32
+        text-black
+        overflow-x-hidden
+      "
     >
       <div
         class="
           w-3/5
           mx-auto
           border border-secondary
-          flex
-          divide-x-2 divide-secondary
+          flex flex-col
+          md:flex-row
+          divide-y-2
+          md:divide-x-2
+          divide-secondary
           mb-16
         "
       >
@@ -217,10 +229,11 @@
     </section>
     <section
       id="what-will-i-win"
-      class="w-full bg-cover bg-center bg-no-repeat p-32"
+      class="w-full bg-gray-300 bg-cover bg-center bg-no-repeat pt-32 mb-52"
+      style="overflow-x: clip"
     >
-      <div class="flex w-4/5 gap-6">
-        <div class="">
+      <div class="flex w-4/5 gap-6 px-32">
+        <div>
           <div class="w-40 h-40 bg-white grid place-items-center">
             <HandIcon class="w-24 h-24 fill-current text-primary" />
           </div>
@@ -238,13 +251,40 @@
           </p>
         </div>
       </div>
-      <div class="w-full flex justify-end items-center mt-4">
+      <div class="w-full flex justify-end items-center mt-4 px-32">
         <p class="text-secondary text-base font-semibold">
           KAZANÇLARIN DEVAMINI GÖRMEK İÇİN KAYDIR
         </p>
         <span class="inline-block ml-3"
           ><RightArrowIcon class="stroke-current text-primary"
         /></span>
+      </div>
+      <div class="relative h-[450px]">
+        <div class="absolute w-full">
+          <Carousel :items="whatWillIWinCarouselItems" class="bottom-0 py-20">
+            <template #iconbox="item">
+              <div class="w-full h-5">
+                <span
+                  class="
+                    absolute
+                    w-28
+                    h-28
+                    grid
+                    place-items-center
+                    bg-primary
+                    left-10
+                    top-0
+                    -translate-y-1/2
+                  "
+                >
+                  <p class="text-7xl font-black text-white">
+                    <component :is="item.icon" />
+                  </p>
+                </span>
+              </div>
+            </template>
+          </Carousel>
+        </div>
       </div>
     </section>
     <section
@@ -418,6 +458,40 @@ export default {
           ],
         ],
       },
+      whatWillIWinCarouselItems: [
+        {
+          icon: 'UniHatIcon',
+          upperText: 'Yıldız Akademi Kapsamında Sertifikalı Eğitim Fırsatları',
+          lowerText: '',
+        },
+        {
+          icon: 'SuccessBadgeIcon',
+          upperText:
+            'Endüstri 4.0, Yapay Zeka, Veri Bilimi Dijital Yetkinlik Kazanım Programları',
+          lowerText: '',
+        },
+        {
+          icon: 'BookIcon',
+          upperText: '16,000’den Fazla Eğitimin Bulunduğu Gelişim Kütüphanesi',
+          lowerText: '',
+        },
+        {
+          icon: 'SpeakerIcon',
+          upperText: 'Üst Yöneticiler ile Tea Talk Etkinlikleri',
+          lowerText: '',
+        },
+        {
+          icon: 'PuzzleIcon',
+          upperText: 'Uzmanlardan Birebir Koçluk ve Mentorluk',
+          lowerText: '',
+        },
+        {
+          icon: 'ChatIcon',
+          upperText:
+            'Departman Liderleri ile Webinar’lar ve Soru-Cevap Etkinlikleri',
+          lowerText: '',
+        },
+      ],
     }
   },
   computed: {
