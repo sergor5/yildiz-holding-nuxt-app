@@ -12,6 +12,7 @@
     "lintfix": "prettier --write --list-different ."
   },
   "dependencies": {
+    "@egjs/vue-flicking": "^4.9.1",
     "@nuxtjs/axios": "^5.13.6",
     "@tailwindcss/forms": "^0.5.2",
     "core-js": "^3.19.3",

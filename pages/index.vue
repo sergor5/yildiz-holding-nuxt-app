@@ -93,29 +93,6 @@
       </div>
     </section>
     <VerticalNavbar class="z-50" />
-    <!--
-    <DottedBordersWrapper
-      dotColor="white"
-      borderColor="white"
-      class="
-        w-60
-        p-4
-        bg-gray-300 bg-opacity-40
-        backdrop-filter backdrop-blur-[5px]
-        z-10
-      "
-    >
-      <div class="flex flex-col">
-        <div class="flex h-10">
-          <div class="absolute -left-8 bg-white border border-gray-500 p-2">
-            TEST BOX
-          </div>
-        </div>
-        Some content to display Some content to display Some content to display
-        Some content to display
-      </div>
-    </DottedBordersWrapper>
-    -->
     <section id="about" class="bg-white">
       <div class="mx-auto py-24 flex flex-col items-center">
         <h2 class="text-center text-6xl font-extrabold text-red-900 mb-7">
@@ -134,9 +111,62 @@
     </section>
     <section
       id="program"
-      class="w-full bg-cover bg-center bg-no-repeat p-48 py-96 text-black"
+      class="w-full bg-cover bg-center bg-no-repeat py-32 text-black"
     >
-      PROGRAM
+      <div
+        class="
+          w-3/5
+          mx-auto
+          border border-secondary
+          flex
+          divide-x-2 divide-secondary
+          mb-16
+        "
+      >
+        <div
+          class="
+            flex-auto flex-nowrap
+            p-4
+            text-3xl
+            font-bold
+            text-center text-white
+            bg-primary
+          "
+        >
+          İŞE ALIM PROGRAMI 2022
+        </div>
+        <div
+          class="
+            flex-auto flex-nowrap
+            p-4
+            text-3xl
+            font-medium
+            text-secondary text-center
+          "
+        >
+          JOB PROJE BAZLI STAJ 2022
+        </div>
+        <div
+          class="
+            flex-auto flex-nowrap
+            p-4
+            text-3xl
+            font-medium
+            text-secondary text-center
+          "
+        >
+          VJE 2022
+        </div>
+      </div>
+      <div class="w-full flex justify-end items-center mt-4 mx-auto px-32">
+        <p class="text-secondary text-base font-semibold">
+          PROGRAMIN DEVAMINI GÖRMEK İÇİN KAYDIR
+        </p>
+        <span class="inline-block ml-3"
+          ><RightArrowIcon class="stroke-current text-primary"
+        /></span>
+      </div>
+      <Carousel :items="currentProgramItems" />
     </section>
     <section
       id="who-can-join"
@@ -310,17 +340,10 @@
               <option value="">Mühendislik</option>
               <option value="">Güzel Sanatlar</option>
             </select>
-            <select
-              name=""
-              id="dep_3"
-              class="w-full h-full placeholder-secondary"
-            >
+            <select name="" id="" class="w-full h-full placeholder-secondary">
               <option value="">Departman 3</option>
               <option value="">Departman 3.a</option>
               <option value="">Departman 3.b</option>
-              <div class="absolute bottom-0">
-                Öncelik sıranıza göre ve 3 adet departman belirtiniz.
-              </div>
             </select>
             <input
               type="text"
@@ -368,6 +391,42 @@
 <script>
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      programCarouselData: {
+        selectedTabIndex: 0,
+        items: [
+          [
+            {
+              icon: 1,
+              upperText: 'Online Genel Yetenek Testi',
+              lowerText: 'Online İngilizce Testi',
+            },
+            {
+              icon: 2,
+              upperText: 'Online Video Mülakat',
+              lowerText: 'Online Temel Yetkinlik Envanteri',
+            },
+            { icon: 3, upperText: 'Online Case Challenge', lowerText: '' },
+            { icon: 4, upperText: 'Genel Yetenek Kampı', lowerText: '' },
+            {
+              icon: 5,
+              upperText: 'Departmanlar ile Online Mülakat',
+              lowerText: '',
+            },
+            { icon: 6, upperText: 'Yıldız Ol ve Parla', lowerText: '' },
+          ],
+        ],
+      },
+    }
+  },
+  computed: {
+    currentProgramItems() {
+      return this.programCarouselData.items[
+        this.programCarouselData.selectedTabIndex
+      ]
+    },
+  },
 }
 </script>
 
