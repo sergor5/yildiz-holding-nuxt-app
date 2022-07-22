@@ -287,6 +287,12 @@
                 </span>
               </div>
             </template>
+            <template #default="item">
+              <div class="flex flex-col justify-between h-full gap-5">
+                <p class="text-secondary text-5xl" v-html="item.upperText"></p>
+                <hr class="bg-primary h-1 w-1/2" />
+              </div>
+            </template>
           </Carousel>
         </div>
       </div>
@@ -583,34 +589,37 @@ export default {
       whatWillIWinCarouselItems: [
         {
           icon: 'UniHatIcon',
-          upperText: 'Yıldız Akademi Kapsamında Sertifikalı Eğitim Fırsatları',
+          upperText:
+            'Yıldız Akademi Kapsamında Sertifikalı <strong>Eğitim Fırsatları</strong>',
           lowerText: '',
         },
         {
           icon: 'SuccessBadgeIcon',
           upperText:
-            'Endüstri 4.0, Yapay Zeka, Veri Bilimi Dijital Yetkinlik Kazanım Programları',
+            'Endüstri 4.0, Yapay Zeka, Veri Bilimi <strong>Dijital Yetkinlik Kazanım Programları</strong>',
           lowerText: '',
         },
         {
           icon: 'BookIcon',
-          upperText: '16,000’den Fazla Eğitimin Bulunduğu Gelişim Kütüphanesi',
+          upperText:
+            '16,000’den Fazla Eğitimin Bulunduğu <strong>Gelişim Kütüphanesi</strong>',
           lowerText: '',
         },
         {
           icon: 'SpeakerIcon',
-          upperText: 'Üst Yöneticiler ile Tea Talk Etkinlikleri',
+          upperText:
+            'Üst Yöneticiler ile <strong>Tea Talk Etkinlikleri</strong>',
           lowerText: '',
         },
         {
           icon: 'PuzzleIcon',
-          upperText: 'Uzmanlardan Birebir Koçluk ve Mentorluk',
+          upperText: 'Uzmanlardan <strong>Birebir Koçluk ve Mentorluk</strong>',
           lowerText: '',
         },
         {
           icon: 'ChatIcon',
           upperText:
-            'Departman Liderleri ile Webinar’lar ve Soru-Cevap Etkinlikleri',
+            'Departman Liderleri ile Webinar’lar ve <strong>Soru-Cevap Etkinlikleri</strong>',
           lowerText: '',
         },
       ],
