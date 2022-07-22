@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[5000px] bg-gray-700">
+  <div class="min-h-[5000px]">
     <section
       class="
         main-section
@@ -92,33 +92,13 @@
         </div>
       </div>
     </section>
-    <VerticalNavbar />
-    <!--
-    <DottedBordersWrapper
-      dotColor="white"
-      borderColor="white"
-      class="
-        w-60
-        p-4
-        bg-gray-300 bg-opacity-40
-        backdrop-filter backdrop-blur-[5px]
-        z-10
-      "
-    >
-      <div class="flex flex-col">
-        <div class="flex h-10">
-          <div class="absolute -left-8 bg-white border border-gray-500 p-2">
-            TEST BOX
-          </div>
-        </div>
-        Some content to display Some content to display Some content to display
-        Some content to display
-      </div>
-    </DottedBordersWrapper>
-    -->
+    <VerticalNavbar class="z-50" />
     <section id="about" class="bg-white">
       <div class="mx-auto py-24 flex flex-col items-center">
-        <h2 class="text-center text-6xl font-extrabold text-red-900 mb-7">
+        <h2
+          class="text-center text-6xl font-extrabold text-red-900 mb-7"
+          style="line-height: 1.3"
+        >
           JOB@YıldızHolding<br />
           NEDİR?
         </h2>
@@ -134,9 +114,71 @@
     </section>
     <section
       id="program"
-      class="w-full bg-cover bg-center bg-no-repeat p-48 py-96 text-black"
+      class="
+        w-full
+        bg-cover bg-center bg-no-repeat
+        py-32
+        text-black
+        overflow-x-hidden
+      "
     >
-      PROGRAM
+      <div
+        class="
+          w-3/5
+          mx-auto
+          border border-secondary
+          flex flex-col
+          md:flex-row
+          divide-y-2
+          md:divide-x-2
+          divide-secondary
+          mb-16
+        "
+      >
+        <div
+          class="
+            flex-auto flex-nowrap
+            p-4
+            text-3xl
+            font-bold
+            text-center text-white
+            bg-primary
+          "
+        >
+          İŞE ALIM PROGRAMI 2022
+        </div>
+        <div
+          class="
+            flex-auto flex-nowrap
+            p-4
+            text-3xl
+            font-medium
+            text-secondary text-center
+          "
+        >
+          JOB PROJE BAZLI STAJ 2022
+        </div>
+        <div
+          class="
+            flex-auto flex-nowrap
+            p-4
+            text-3xl
+            font-medium
+            text-secondary text-center
+          "
+        >
+          VJE 2022
+        </div>
+      </div>
+      <div class="w-full flex justify-end items-center mt-4 mx-auto px-32">
+        <p class="text-secondary text-base font-semibold">
+          PROGRAMIN DEVAMINI GÖRMEK İÇİN KAYDIR
+        </p>
+        <span class="inline-block ml-3"
+          ><RightArrowIcon class="stroke-current text-primary"
+        /></span>
+      </div>
+      <Carousel :items="currentProgramItems" />
     </section>
     <section
       id="who-can-join"
@@ -185,15 +227,280 @@
         </div>
       </div>
     </section>
-    <section id="what-will-i-win">NELER KAZANACAĞIM?</section>
-    <section id="application-process">BAŞVURU SÜREÇLERİ</section>
-    <section id="faq">SIKÇA SORULAN SORULAR</section>
+    <section
+      id="what-will-i-win"
+      class="w-full bg-gray-300 bg-cover bg-center bg-no-repeat pt-32 mb-52"
+      style="overflow-x: clip"
+    >
+      <div class="flex w-4/5 gap-6 px-32">
+        <div>
+          <div class="w-40 h-40 bg-white grid place-items-center">
+            <HandIcon class="w-24 h-24 fill-current text-primary" />
+          </div>
+        </div>
+        <div class="flex flex-col justify-center">
+          <h2
+            class="text-6xl font-extrabold text-secondary"
+            style="line-height: 1.3"
+          >
+            NELER <br />KAZANACAĞIM?
+          </h2>
+          <p class="text-primary text-4xl font-medium pl-20 w-5/6">
+            Kariyerine güçlü bir başlangıç yapmak için ihtiyacın olacak tüm
+            gelişim alanları!
+          </p>
+        </div>
+      </div>
+      <div class="w-full flex justify-end items-center mt-4 px-32">
+        <p class="text-secondary text-base font-semibold">
+          KAZANÇLARIN DEVAMINI GÖRMEK İÇİN KAYDIR
+        </p>
+        <span class="inline-block ml-3"
+          ><RightArrowIcon class="stroke-current text-primary"
+        /></span>
+      </div>
+      <div class="relative h-[450px]">
+        <div class="absolute w-full">
+          <Carousel :items="whatWillIWinCarouselItems" class="bottom-0 py-20">
+            <template #iconbox="item">
+              <div class="w-full h-5">
+                <span
+                  class="
+                    absolute
+                    w-28
+                    h-28
+                    grid
+                    place-items-center
+                    bg-primary
+                    left-10
+                    top-0
+                    -translate-y-1/2
+                  "
+                >
+                  <p class="text-7xl font-black text-white">
+                    <component :is="item.icon" />
+                  </p>
+                </span>
+              </div>
+            </template>
+          </Carousel>
+        </div>
+      </div>
+    </section>
+    <section
+      id="application-process"
+      class="w-full h-96 bg-white flex flex-col items-center p-10 gap-4"
+    >
+      <h2
+        class="text-6xl font-extrabold text-secondary text-center"
+        style="line-height: 1.2"
+      >
+        BAŞVURU SÜREÇLERİ
+      </h2>
+      <p class="text-primary text-center text-4xl font-medium w-2/5">
+        Başvurmak ve bu kariyer fırsatını yakalamak için aşağıdaki butona tıkla!
+      </p>
+    </section>
+    <section
+      id="application-form"
+      class="w-full flex flex-col items-center gap-4 px-10 pt-16 pb-36"
+    >
+      <h2
+        class="text-6xl font-extrabold text-white text-center"
+        style="line-height: 1.2"
+      >
+        BAŞVURU FORMU
+      </h2>
+      <DottedBordersWrapper
+        borderColor="border-white"
+        dotColor="bg-white"
+        class="bg-white bg-opacity-10 backdrop-blur-sm text-4xl p-10 w-4/6"
+      >
+        <form action="" class="mb-10">
+          <div class="grid grid-cols-2 gap-x-3 gap-y-4">
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="İsim Soyisim"
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="Doğum Yılı - Gün & Ay & Yıl"
+            />
+            <input
+              type="tel"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="Telefon"
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="Beklenen Mezuniyet Tarihi - Ay & Yıl"
+            />
+            <input
+              type="email"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="E-posta"
+            />
+            <select name="" id="" class="px-4 py-3 placeholder-secondary">
+              <option value="">Departman 1</option>
+              <option value="">Departman 1.a</option>
+              <option value="">Departman 1.b</option>
+            </select>
+            <select name="" id="" class="px-4 py-3 placeholder-secondary">
+              <option value="">Üniversite</option>
+              <option value="">İstanbul Aydın Üniversitesi</option>
+              <option value="">Boğaziçi Üniversitesi</option>
+              <option value="">Lorem Ipsum Üniversitesi</option>
+              <option value="">Dolar Sit Amet Üniversitesi</option>
+              <option value="">İstanbul Aydın Üniversitesi</option>
+              <option value="">Boğaziçi Üniversitesi</option>
+              <option value="">Lorem Ipsum Üniversitesi</option>
+              <option value="">Dolar Sit Amet Üniversitesi</option>
+            </select>
+            <select name="" id="" class="px-4 py-3 placeholder-secondary">
+              <option value="">Departman 2</option>
+              <option value="">Departman 2.a</option>
+              <option value="">Departman 2.b</option>
+            </select>
+
+            <select name="" id="" class="px-4 py-3 placeholder-secondar">
+              <option value="">Bölüm (Yüksek Lisans Dahil)</option>
+              <option value="">Mühendislik</option>
+              <option value="">Güzel Sanatlar</option>
+            </select>
+            <select name="" id="" class="w-full h-full placeholder-secondary">
+              <option value="">Departman 3</option>
+              <option value="">Departman 3.a</option>
+              <option value="">Departman 3.b</option>
+            </select>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="Sınıf"
+            />
+          </div>
+        </form>
+        <div
+          class="
+            absolute
+            bottom-0
+            left-0
+            w-full
+            z-10
+            h-0
+            flex
+            justify-center
+            items-center
+          "
+        >
+          <DottedBordersWrapper
+            :borderOpacity="0.6"
+            class="active:scale-95 transition-transform"
+          >
+            <ActionButton class="whitespace-nowrap">HEMEN BAŞVUR</ActionButton>
+          </DottedBordersWrapper>
+        </div>
+      </DottedBordersWrapper>
+    </section>
+    <section id="faq" class="w-full h-96 bg-white flex justify-center p-10">
+      <h2
+        class="text-6xl font-extrabold text-primary text-center"
+        style="line-height: 1.2"
+      >
+        SIKÇA SORULAN<br />
+        SORULAR
+      </h2>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      programCarouselData: {
+        selectedTabIndex: 0,
+        items: [
+          [
+            {
+              icon: 1,
+              upperText: 'Online Genel Yetenek Testi',
+              lowerText: 'Online İngilizce Testi',
+            },
+            {
+              icon: 2,
+              upperText: 'Online Video Mülakat',
+              lowerText: 'Online Temel Yetkinlik Envanteri',
+            },
+            { icon: 3, upperText: 'Online Case Challenge', lowerText: '' },
+            { icon: 4, upperText: 'Genel Yetenek Kampı', lowerText: '' },
+            {
+              icon: 5,
+              upperText: 'Departmanlar ile Online Mülakat',
+              lowerText: '',
+            },
+            { icon: 6, upperText: 'Yıldız Ol ve Parla', lowerText: '' },
+          ],
+        ],
+      },
+      whatWillIWinCarouselItems: [
+        {
+          icon: 'UniHatIcon',
+          upperText: 'Yıldız Akademi Kapsamında Sertifikalı Eğitim Fırsatları',
+          lowerText: '',
+        },
+        {
+          icon: 'SuccessBadgeIcon',
+          upperText:
+            'Endüstri 4.0, Yapay Zeka, Veri Bilimi Dijital Yetkinlik Kazanım Programları',
+          lowerText: '',
+        },
+        {
+          icon: 'BookIcon',
+          upperText: '16,000’den Fazla Eğitimin Bulunduğu Gelişim Kütüphanesi',
+          lowerText: '',
+        },
+        {
+          icon: 'SpeakerIcon',
+          upperText: 'Üst Yöneticiler ile Tea Talk Etkinlikleri',
+          lowerText: '',
+        },
+        {
+          icon: 'PuzzleIcon',
+          upperText: 'Uzmanlardan Birebir Koçluk ve Mentorluk',
+          lowerText: '',
+        },
+        {
+          icon: 'ChatIcon',
+          upperText:
+            'Departman Liderleri ile Webinar’lar ve Soru-Cevap Etkinlikleri',
+          lowerText: '',
+        },
+      ],
+    }
+  },
+  computed: {
+    currentProgramItems() {
+      return this.programCarouselData.items[
+        this.programCarouselData.selectedTabIndex
+      ]
+    },
+  },
 }
 </script>
 
@@ -206,5 +513,11 @@ export default {
 }
 #who-can-join {
   background-image: url('~assets/images/who-can-join-bg.png');
+}
+#what-will-i-win {
+  background-image: url('~assets/images/what-will-i-win-bg.png');
+}
+#application-form {
+  background-image: url('~assets/images/application-form-bg.png');
 }
 </style>

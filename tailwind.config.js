@@ -11,6 +11,7 @@ module.exports = {
           hover: '#c91535',
           active: '#9e0a25',
         },
+        secondary: '#4D000D',
         trueGray: colors.trueGray,
       },
       dropShadow: {
@@ -21,5 +22,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
