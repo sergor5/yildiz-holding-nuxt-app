@@ -304,27 +304,97 @@
       <p class="text-primary text-center text-4xl font-medium w-2/5">
         Başvurmak ve bu kariyer fırsatını yakalamak için aşağıdaki butona tıkla!
       </p>
-      <div class="application-process-card bg-gray-100 relative h-96 w-4/5">
-        <div class="flex items-center h-full">
-          <div class="flex-1" v-for="i in [1, 2, 4]" :key="i + 'rand'">
-            <div class="relative">
-              <span
+      <div class="application-process-card bg-gray-100 relative h-96 w-5/6">
+        <div class="flex pt-24 pb-10 h-full">
+          <div class="flex flex-1 gap-2 justify-center pl-14">
+            <div class="flex flex-col h-full">
+              <div class="w-20 h-20 grid place-items-center bg-primary">
+                <StarOutlineIcon />
+              </div>
+              <div
                 class="
-                  absolute
-                  w-20
-                  h-20
-                  grid
-                  place-items-center
-                  bg-primary
-                  left-10
-                  top-0
-                  -translate-y-1/2
+                  w-full
+                  h-1/2
+                  border-r border-primary border-opacity-50
+                  relative
                 "
               >
-                <StarOutlineIcon />
-              </span>
+                <span
+                  class="
+                    w-2.5
+                    h-2.5
+                    bg-primary
+                    absolute
+                    bottom-0
+                    right-0
+                    translate-x-2.5
+                  "
+                ></span>
+              </div>
             </div>
-            <div class="w-24">Online Değerlendirme Aşamaları</div>
+            <div class="text-5xl text-secondary pt-6">
+              Online <br /><strong>Değerlendirme Aşamaları</strong>
+            </div>
+          </div>
+          <div class="flex flex-1 gap-2 justify-center">
+            <div class="flex flex-col">
+              <div class="w-20 h-20 grid place-items-center bg-primary">
+                <TentIcon />
+              </div>
+              <div
+                class="
+                  w-full
+                  h-1/2
+                  border-r border-primary border-opacity-50
+                  relative
+                "
+              >
+                <span
+                  class="
+                    w-2.5
+                    h-2.5
+                    bg-primary
+                    absolute
+                    bottom-0
+                    right-0
+                    translate-x-2.5
+                  "
+                ></span>
+              </div>
+            </div>
+            <div class="text-5xl text-secondary pt-6">
+              Yetenek <br /><strong>Kampı</strong>
+            </div>
+          </div>
+          <div class="flex flex-1 gap-2 justify-center">
+            <div class="flex flex-col">
+              <div class="w-20 h-20 grid place-items-center bg-primary">
+                <LaptopIcon />
+              </div>
+              <div
+                class="
+                  w-full
+                  h-1/2
+                  border-r border-primary border-opacity-50
+                  relative
+                "
+              >
+                <span
+                  class="
+                    w-2.5
+                    h-2.5
+                    bg-primary
+                    absolute
+                    bottom-0
+                    right-0
+                    translate-x-2.5
+                  "
+                ></span>
+              </div>
+            </div>
+            <div class="text-5xl text-secondary pt-6">
+              Online <br /><strong>Mülakat</strong>
+            </div>
           </div>
         </div>
         <div
