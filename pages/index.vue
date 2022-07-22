@@ -87,7 +87,9 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton> HEMEN BAŞVUR </ActionButton>
+            <ActionButton v-scroll-to="'#application-form'">
+              HEMEN BAŞVUR
+            </ActionButton>
           </DottedBordersWrapper>
         </div>
       </div>
@@ -218,7 +220,9 @@
                 :borderOpacity="0.6"
                 class="active:scale-95 transition-transform"
               >
-                <ActionButton class="whitespace-nowrap"
+                <ActionButton
+                  class="whitespace-nowrap"
+                  v-scroll-to="'#application-form'"
                   >HEMEN BAŞVUR</ActionButton
                 >
               </DottedBordersWrapper>
@@ -283,13 +287,19 @@
                 </span>
               </div>
             </template>
+            <template #default="item">
+              <div class="flex flex-col justify-between h-full gap-5">
+                <p class="text-secondary text-5xl" v-html="item.upperText"></p>
+                <hr class="bg-primary h-1 w-1/2" />
+              </div>
+            </template>
           </Carousel>
         </div>
       </div>
     </section>
     <section
       id="application-process"
-      class="w-full h-96 bg-white flex flex-col items-center p-10 gap-4"
+      class="w-full bg-white flex flex-col items-center p-10 pb-32 gap-4"
     >
       <h2
         class="text-6xl font-extrabold text-secondary text-center"
@@ -300,6 +310,124 @@
       <p class="text-primary text-center text-4xl font-medium w-2/5">
         Başvurmak ve bu kariyer fırsatını yakalamak için aşağıdaki butona tıkla!
       </p>
+      <div class="application-process-card bg-gray-100 relative h-96 w-5/6">
+        <div class="flex pt-24 pb-10 h-full">
+          <div class="flex flex-1 gap-2 justify-center pl-14">
+            <div class="flex flex-col h-full">
+              <div class="w-20 h-20 grid place-items-center bg-primary">
+                <StarOutlineIcon />
+              </div>
+              <div
+                class="
+                  w-full
+                  h-1/2
+                  border-r border-primary border-opacity-50
+                  relative
+                "
+              >
+                <span
+                  class="
+                    w-2.5
+                    h-2.5
+                    bg-primary
+                    absolute
+                    bottom-0
+                    right-0
+                    translate-x-2.5
+                  "
+                ></span>
+              </div>
+            </div>
+            <div class="text-5xl text-secondary pt-6">
+              Online <br /><strong>Değerlendirme Aşamaları</strong>
+            </div>
+          </div>
+          <div class="flex flex-1 gap-2 justify-center">
+            <div class="flex flex-col">
+              <div class="w-20 h-20 grid place-items-center bg-primary">
+                <TentIcon />
+              </div>
+              <div
+                class="
+                  w-full
+                  h-1/2
+                  border-r border-primary border-opacity-50
+                  relative
+                "
+              >
+                <span
+                  class="
+                    w-2.5
+                    h-2.5
+                    bg-primary
+                    absolute
+                    bottom-0
+                    right-0
+                    translate-x-2.5
+                  "
+                ></span>
+              </div>
+            </div>
+            <div class="text-5xl text-secondary pt-6">
+              Yetenek <br /><strong>Kampı</strong>
+            </div>
+          </div>
+          <div class="flex flex-1 gap-2 justify-center">
+            <div class="flex flex-col">
+              <div class="w-20 h-20 grid place-items-center bg-primary">
+                <LaptopIcon />
+              </div>
+              <div
+                class="
+                  w-full
+                  h-1/2
+                  border-r border-primary border-opacity-50
+                  relative
+                "
+              >
+                <span
+                  class="
+                    w-2.5
+                    h-2.5
+                    bg-primary
+                    absolute
+                    bottom-0
+                    right-0
+                    translate-x-2.5
+                  "
+                ></span>
+              </div>
+            </div>
+            <div class="text-5xl text-secondary pt-6">
+              Online <br /><strong>Mülakat</strong>
+            </div>
+          </div>
+        </div>
+        <div
+          class="
+            absolute
+            bottom-0
+            left-0
+            w-full
+            z-10
+            h-0
+            flex
+            justify-center
+            items-center
+          "
+        >
+          <DottedBordersWrapper
+            :borderOpacity="0.6"
+            class="active:scale-95 transition-transform"
+          >
+            <ActionButton
+              class="whitespace-nowrap"
+              v-scroll-to="'#application-form'"
+              >HEMEN BAŞVUR</ActionButton
+            >
+          </DottedBordersWrapper>
+        </div>
+      </div>
     </section>
     <section
       id="application-form"
@@ -461,34 +589,37 @@ export default {
       whatWillIWinCarouselItems: [
         {
           icon: 'UniHatIcon',
-          upperText: 'Yıldız Akademi Kapsamında Sertifikalı Eğitim Fırsatları',
+          upperText:
+            'Yıldız Akademi Kapsamında Sertifikalı <strong>Eğitim Fırsatları</strong>',
           lowerText: '',
         },
         {
           icon: 'SuccessBadgeIcon',
           upperText:
-            'Endüstri 4.0, Yapay Zeka, Veri Bilimi Dijital Yetkinlik Kazanım Programları',
+            'Endüstri 4.0, Yapay Zeka, Veri Bilimi <strong>Dijital Yetkinlik Kazanım Programları</strong>',
           lowerText: '',
         },
         {
           icon: 'BookIcon',
-          upperText: '16,000’den Fazla Eğitimin Bulunduğu Gelişim Kütüphanesi',
+          upperText:
+            '16,000’den Fazla Eğitimin Bulunduğu <strong>Gelişim Kütüphanesi</strong>',
           lowerText: '',
         },
         {
           icon: 'SpeakerIcon',
-          upperText: 'Üst Yöneticiler ile Tea Talk Etkinlikleri',
+          upperText:
+            'Üst Yöneticiler ile <strong>Tea Talk Etkinlikleri</strong>',
           lowerText: '',
         },
         {
           icon: 'PuzzleIcon',
-          upperText: 'Uzmanlardan Birebir Koçluk ve Mentorluk',
+          upperText: 'Uzmanlardan <strong>Birebir Koçluk ve Mentorluk</strong>',
           lowerText: '',
         },
         {
           icon: 'ChatIcon',
           upperText:
-            'Departman Liderleri ile Webinar’lar ve Soru-Cevap Etkinlikleri',
+            'Departman Liderleri ile Webinar’lar ve <strong>Soru-Cevap Etkinlikleri</strong>',
           lowerText: '',
         },
       ],
@@ -519,5 +650,8 @@ export default {
 }
 #application-form {
   background-image: url('~assets/images/application-form-bg.png');
+}
+.application-process-card {
+  background-image: url('~assets/images/application-process-bg.png');
 }
 </style>

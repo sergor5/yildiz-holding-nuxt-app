@@ -16,7 +16,7 @@
         :borderOpacity="0.6"
         class="mx-10 w-[470px] bg-white"
       >
-        <div class="flex flex-col p-14 gap-4 justify-start h-full">
+        <div class="flex flex-col p-14 gap-4 h-full">
           <slot name="iconbox" :icon="item.icon">
             <div class="w-full h-28 justify-self-start">
               <span
@@ -38,16 +38,18 @@
               </span>
             </div>
           </slot>
-          <p class="text-secondary font-extrabold text-5xl justify-self-start">
-            {{ item.upperText }}
-          </p>
-          <hr class="bg-primary h-1 w-1/2" />
-          <p
-            v-if="item.lowerText"
-            class="text-secondary font-extrabold text-5xl"
-          >
-            {{ item.lowerText }}
-          </p>
+          <slot :upperText="item.upperText" :lowerText="item.lowerText">
+            <p
+              class="text-secondary font-extrabold text-5xl justify-self-start"
+              v-html="item.upperText"
+            ></p>
+            <hr class="bg-primary h-1 w-1/2" />
+            <p
+              v-if="item.lowerText"
+              class="text-secondary font-extrabold text-5xl"
+              v-html="item.lowerText"
+            ></p>
+          </slot>
         </div>
       </DottedBordersWrapper>
     </Flicking>
