@@ -15,6 +15,8 @@
         :key="'item-' + index"
         :borderOpacity="0.6"
         class="mx-10 w-[470px] bg-white"
+        data-aos="fade-up"
+        :data-aos-delay="index * 100"
       >
         <div class="flex flex-col p-14 gap-4 h-full">
           <slot name="iconbox" :icon="item.icon">

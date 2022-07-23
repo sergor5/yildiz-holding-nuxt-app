@@ -13,6 +13,8 @@
       backdrop-blur-sm
       border border-white border-opacity-40
     "
+    data-aos="zoom"
+    v-if="visible"
   >
     <div>
       <div class="w-full text-center text-white text-base">
@@ -22,12 +24,14 @@
         <div class="font-semibold">MENU</div>
       </div>
       <nav class="relative w-0 flex justify-end">
-        <ul class="absolute text-white whitespace-nowrap">
+        <ul class="absolute text-white whitespace-nowrap" v-if="menuOpen">
           <li
             v-for="item in navItems"
             class="nav-item"
             :class="{ 'active font-bold': item.id == selectedId }"
             :key="item.id"
+            data-aos="fade-left"
+            :data-aos-delay="item.id * 100"
           >
             <a :href="item.url" @click="selectItem(item.id)">{{ item.text }}</a>
           </li>
@@ -50,6 +54,8 @@ export default {
   data() {
     return {
       selectedId: 0,
+      visible: true,
+      menuOpen: true,
       navItems: [
         { id: 0, text: 'HAKKINDA', url: '#about' },
         { id: 1, text: 'PROGRAM', url: '#program' },
