@@ -1,5 +1,7 @@
 <template>
   <div>
+    <VerticalNavbar class="z-50" />
+
     <Nuxt />
     <footer
       class="

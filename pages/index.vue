@@ -1,12 +1,13 @@
 <template>
-  <div class="w-full">
+  <div>
     <section
       class="
         main-section
         relative
         bg-cover bg-center bg-no-repeat
-        min-h-screen
         w-full
+        pb-24
+        md:pb-7 md:min-h-screen
       "
     >
       <Logo
@@ -23,7 +24,7 @@
         data-aos-delay="400"
       />
       <div
-        class="flex justify-center w-full relative top-48 md:top-36 lg:top-7"
+        class="flex justify-center w-full relative pt-48 md:pt-36 lg:pt-7"
         data-aos="fade-down"
       >
         <svg
@@ -48,24 +49,26 @@
           <rect id="badge" width="663" height="430" fill="url(#pattern)" />
         </svg>
       </div>
-      <div class="absolute w-full flex flex-col bottom-20">
-        <div class="mb-14">
+      <div class="w-full flex flex-col bottom-20 md:absolute">
+        <div class="mb-14 flex justify-center sm:justify-start">
           <DottedBordersWrapper
             dotColor="bg-white"
             borderColor="border-white"
             :borderOpacity="0.6"
             class="
               absolute
-              left-20
-              p-5
-              bg-primary bg-opacity-10
+              sm:left-20
+              p-3
+              sm:p-5
+              bg-primary bg-opacity-40
+              sm:bg-opacity-30
+              md:bg-opacity-10
               backdrop-blur-sm
-              flex
-              justify-center
+              w-5/6
+              sm:w-[500px]
             "
-            style="width: fit-content"
           >
-            <p class="w-[458px] text-2xl font-medium text-white">
+            <p class="w-full md:w-[458px] text-2xl font-medium text-white">
               Apply to our award-winning JOB Young Talent Program for
               recruitment (new graduate), internship and development
               opportunities in a global company with new working models!
@@ -74,10 +77,10 @@
         </div>
         <div
           class="
-            flex
+            flex flex-col
+            md:flex-row
             justify-between
-            ml-auto
-            mr-48
+            mx-auto
             border border-white border-opacity-30
           "
           style="width: 72%"
@@ -86,6 +89,7 @@
             dotColor="bg-white"
             borderColor="border-white"
             :borderOpacity="0.6"
+            class="bg-black bg-opacity-50 md:bg-transparent"
           >
             <template #top-left>
               <CalendarIcon class="absolute bottom-0 right-0" />
@@ -102,14 +106,13 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton v-scroll-to="'#application-form'">
+            <ActionButton v-scroll-to="'#application-form'" class="w-full">
               HEMEN BAŞVUR
             </ActionButton>
           </DottedBordersWrapper>
         </div>
       </div>
     </section>
-    <!-- <VerticalNavbar class="z-50" /> -->
     <template v-if="false">
       <section id="about" class="bg-white">
         <div class="mx-auto py-24 flex flex-col items-center">
