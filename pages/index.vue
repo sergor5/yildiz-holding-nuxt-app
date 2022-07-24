@@ -801,13 +801,13 @@
               placeholder="Sınıf"
             />
           </div>
-          <button
+          <input
             type="submit"
             class="hidden"
             name="form-name"
             value="job_application"
             ref="submitBtn"
-          ></button>
+          />
         </form>
         <div
           class="
