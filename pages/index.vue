@@ -50,7 +50,11 @@
         </svg>
       </div>
       <div class="w-full flex flex-col bottom-20 md:absolute">
-        <div class="mb-14 flex justify-center sm:justify-start">
+        <div
+          class="mb-14 flex justify-center sm:justify-start"
+          data-aos="fade"
+          data-aos-delay="500"
+        >
           <DottedBordersWrapper
             dotColor="bg-white"
             borderColor="border-white"
@@ -84,6 +88,8 @@
             border border-white border-opacity-30
           "
           style="width: 72%"
+          data-aos="fade"
+          data-aos-delay="600"
         >
           <DottedBordersWrapper
             dotColor="bg-white"
@@ -165,7 +171,7 @@
       class="w-full bg-cover bg-center bg-no-repeat pt-8 pb-20 lg:p-24 2xl:p-48"
     >
       <div class="flex flex-col w-5/6 xl:w-3/5 mx-auto text-white gap-4">
-        <div class="flex gap-4">
+        <div class="flex gap-4" data-aos="fade-right">
           <div
             class="
               w-16
@@ -186,7 +192,11 @@
             KİMLER<br />KATILABİLİR?
           </h2>
         </div>
-        <div class="flex flex-col justify-center xl:ml-44">
+        <div
+          class="flex flex-col justify-center xl:ml-44"
+          data-aos="zoom-in"
+          data-aos-delay="150"
+        >
           <DottedBordersWrapper
             borderColor="border-white"
             dotColor="bg-white"
@@ -215,6 +225,8 @@
                 justify-center
                 lg:-right-32
               "
+              data-aos="zoom-in"
+              data-aos-delay="200"
             >
               <DottedBordersWrapper
                 dotColor="bg-white"
@@ -247,7 +259,7 @@
       style="overflow-x: clip"
     >
       <div class="flex w-4/5 gap-6 md:px-10 xl:px-24 2xl:px-32 mx-auto">
-        <div>
+        <div data-aos="fade">
           <div
             class="
               w-16
@@ -271,7 +283,11 @@
             />
           </div>
         </div>
-        <div class="flex flex-col justify-center">
+        <div
+          class="flex flex-col justify-center"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
           <h2
             class="
               text-2xl
@@ -377,6 +393,7 @@
           text-secondary text-center
         "
         style="line-height: 1.2"
+        data-aos="fade"
       >
         BAŞVURU SÜREÇLERİ
       </h2>
@@ -390,6 +407,8 @@
           lg:w-3/5
           xl:w-2/5
         "
+        data-aos="fade"
+        data-aos-delay="150"
       >
         Başvurmak ve bu kariyer fırsatını yakalamak için aşağıdaki butona tıkla!
       </p>
@@ -416,7 +435,10 @@
             lg:gap-2
           "
         >
-          <div class="flex flex-1 gap-2 justify-center lg:justify-end">
+          <div
+            class="flex flex-1 gap-2 justify-center lg:justify-end"
+            data-aos="fade-up"
+          >
             <div
               class="
                 text-2xl
@@ -484,7 +506,11 @@
               >
             </div>
           </div>
-          <div class="flex flex-1 gap-2 justify-center lg:justify-end">
+          <div
+            class="flex flex-1 gap-2 justify-center lg:justify-end"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div
               class="
                 text-2xl
@@ -549,7 +575,11 @@
               Yetenek <br /><strong>Kampı</strong>
             </div>
           </div>
-          <div class="flex flex-1 gap-2 justify-center lg:justify-end">
+          <div
+            class="flex flex-1 gap-2 justify-center lg:justify-end"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div
               class="
                 text-2xl
@@ -631,6 +661,8 @@
           <DottedBordersWrapper
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
+            data-aos="fade"
+            data-aos-delay="200"
           >
             <ActionButton
               class="whitespace-nowrap"
@@ -816,7 +848,7 @@
         SORULAR
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
-        <div class="flex">
+        <div class="flex" data-aos="fade">
           <div
             class="
               flex-shrink-0
@@ -844,7 +876,7 @@
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex" data-aos="fade" data-aos-delay="100">
           <div
             class="
               flex-shrink-0
@@ -871,7 +903,7 @@
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex" data-aos="fade">
           <div
             class="
               flex-shrink-0
@@ -899,7 +931,7 @@
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex" data-aos="fade" data-aos-delay="100">
           <div
             class="
               flex-shrink-0
@@ -925,7 +957,7 @@
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex" data-aos="fade">
           <div
             class="
               flex-shrink-0
