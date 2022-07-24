@@ -827,9 +827,7 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton class="whitespace-nowrap" @click.native="onSubmit"
-              >HEMEN BAŞVUR</ActionButton
-            >
+            <ActionButton class="whitespace-nowrap">HEMEN BAŞVUR</ActionButton>
           </DottedBordersWrapper>
         </div>
       </DottedBordersWrapper>
