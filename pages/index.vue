@@ -711,7 +711,7 @@
           action="/"
           class="mb-10"
           netlify
-          ref="form"
+          ref="applicationForm"
         >
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-4">
             <input
@@ -1043,7 +1043,7 @@ export default {
   },
   methods: {
     submitForm() {
-      document.querySelector('input[name="form-name"').click()
+      this.$refs.applicationForm.submit()
     },
   },
 }
