@@ -113,32 +113,38 @@
         </div>
       </div>
     </section>
+    <section id="about" class="bg-white">
+      <div class="mx-auto py-10 md:py-24 flex flex-col items-center">
+        <h2
+          class="
+            text-center text-3xl
+            md:text-6xl
+            font-extrabold
+            text-secondary
+            mb-7
+          "
+          style="line-height: 1.3"
+          data-aos="fade-down"
+        >
+          JOB@YıldızHolding<br />
+          NEDİR?
+        </h2>
+        <DottedBordersWrapper
+          :borderOpacity="0.6"
+          class="w-5/6 md:w-3/5"
+          data-aos="zoom-in-down"
+          data-aos-delay="150"
+        >
+          <p class="text-center text-secondary p-2 md:p-10 text-xl md:text-3xl">
+            JOB@YıldızHolding, tam 11 yıldır gelişimine ve kariyerine yön
+            vermeye, global bir şirket kültürünü deneyimlemeye ve kariyer
+            fırsatlarını yakalamaya hevesli tüm genç yeteneklerin buluşma
+            noktası olan staj ve işe alım programıdır!
+          </p>
+        </DottedBordersWrapper>
+      </div>
+    </section>
     <template v-if="false">
-      <section id="about" class="bg-white">
-        <div class="mx-auto py-24 flex flex-col items-center">
-          <h2
-            class="text-center text-6xl font-extrabold text-red-900 mb-7"
-            style="line-height: 1.3"
-            data-aos="fade-down"
-          >
-            JOB@YıldızHolding<br />
-            NEDİR?
-          </h2>
-          <DottedBordersWrapper
-            :borderOpacity="0.6"
-            class="w-3/5"
-            data-aos="zoom-in-down"
-            data-aos-delay="150"
-          >
-            <p class="text-center text-red-900 p-10 text-3xl">
-              JOB@YıldızHolding, tam 11 yıldır gelişimine ve kariyerine yön
-              vermeye, global bir şirket kültürünü deneyimlemeye ve kariyer
-              fırsatlarını yakalamaya hevesli tüm genç yeteneklerin buluşma
-              noktası olan staj ve işe alım programıdır!
-            </p>
-          </DottedBordersWrapper>
-        </div>
-      </section>
       <section
         id="program"
         class="
