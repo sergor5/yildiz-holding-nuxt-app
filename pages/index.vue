@@ -748,31 +748,35 @@
               name="dep_1"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
             >
-              <option value="">Departman 1</option>
-              <option value="">Departman 1.a</option>
-              <option value="">Departman 1.b</option>
+              <option value="dep_1">Departman 1</option>
+              <option value="dep_1_a">Departman 1.a</option>
+              <option value="dep_1_b">Departman 1.b</option>
             </select>
             <select
               name="university"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
             >
               <option value="">Üniversite</option>
-              <option value="">İstanbul Aydın Üniversitesi</option>
-              <option value="">Boğaziçi Üniversitesi</option>
-              <option value="">Lorem Ipsum Üniversitesi</option>
-              <option value="">Dolar Sit Amet Üniversitesi</option>
-              <option value="">İstanbul Aydın Üniversitesi</option>
-              <option value="">Boğaziçi Üniversitesi</option>
-              <option value="">Lorem Ipsum Üniversitesi</option>
-              <option value="">Dolar Sit Amet Üniversitesi</option>
+              <option value="uni_ist_ayd">İstanbul Aydın Üniversitesi</option>
+              <option value="uni_bog">Boğaziçi Üniversitesi</option>
+              <option value="uni_lorem">Lorem Ipsum Üniversitesi</option>
+              <option value="uni_dol_sit_amet">
+                Dolar Sit Amet Üniversitesi
+              </option>
+              <option value="uni_ist_ayd_2">İstanbul Aydın Üniversitesi</option>
+              <option value="uni_bog_2">Boğaziçi Üniversitesi</option>
+              <option value="uni_lorem_2">Lorem Ipsum Üniversitesi</option>
+              <option value="uni_dol_sit_amet_2">
+                Dolar Sit Amet Üniversitesi
+              </option>
             </select>
             <select
               name="dep_2"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
             >
-              <option value="">Departman 2</option>
-              <option value="">Departman 2.a</option>
-              <option value="">Departman 2.b</option>
+              <option value="dep_2">Departman 2</option>
+              <option value="dep_2_a">Departman 2.a</option>
+              <option value="dep_2_b">Departman 2.b</option>
             </select>
 
             <select
@@ -780,16 +784,16 @@
               class="px-4 py-3 placeholder-secondar text-sm md:text-base"
             >
               <option value="">Bölüm (Yüksek Lisans Dahil)</option>
-              <option value="">Mühendislik</option>
-              <option value="">Güzel Sanatlar</option>
+              <option value="major_eng">Mühendislik</option>
+              <option value="major_art">Güzel Sanatlar</option>
             </select>
             <select
               name="dep_3"
               class="w-full h-full placeholder-secondary text-sm md:text-base"
             >
               <option value="">Departman 3</option>
-              <option value="">Departman 3.a</option>
-              <option value="">Departman 3.b</option>
+              <option value="dep_3_a">Departman 3.a</option>
+              <option value="dep_3_b">Departman 3.b</option>
             </select>
             <input
               type="text"
@@ -817,9 +821,7 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton
-              class="whitespace-nowrap"
-              @click.native="$refs.submitBtn.click()"
+            <ActionButton class="whitespace-nowrap" @click.native="onSubmit"
               >HEMEN BAŞVUR</ActionButton
             >
           </DottedBordersWrapper>
@@ -1038,6 +1040,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    onSubmit() {
+      this.$refs.submitBtn.click()
+    },
   },
 }
 </script>
