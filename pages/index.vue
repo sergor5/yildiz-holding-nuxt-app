@@ -705,7 +705,7 @@
           lg:w-4/6
         "
       >
-        <form name="job_application" class="mb-10" netlify>
+        <form name="job_application" class="mb-10" netlify ref="form">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-4">
             <input
               type="text"
@@ -809,7 +809,10 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton class="whitespace-nowrap" type="submit"
+            <ActionButton
+              class="whitespace-nowrap"
+              type="submit"
+              @click.native="$refs.form.submit()"
               >HEMEN BAŞVUR</ActionButton
             >
           </DottedBordersWrapper>
