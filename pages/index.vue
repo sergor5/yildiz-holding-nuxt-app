@@ -144,75 +144,85 @@
         </DottedBordersWrapper>
       </div>
     </section>
-    <template v-if="false">
-      <section
-        id="program"
+    <section
+      id="program"
+      class="
+        w-full
+        bg-cover bg-center bg-no-repeat
+        py-12
+        md:py-32
+        text-black
+        overflow-x-hidden
+      "
+    >
+      <div
         class="
-          w-full
-          bg-cover bg-center bg-no-repeat
-          py-32
-          text-black
-          overflow-x-hidden
+          w-4/5
+          xl:w-3/5
+          mx-auto
+          border border-secondary
+          flex flex-col
+          md:flex-row
+          divide-y-2
+          md:divide-x-2
+          divide-secondary
+          mb-16
         "
       >
         <div
           class="
-            w-3/5
-            mx-auto
-            border border-secondary
-            flex flex-col
-            md:flex-row
-            divide-y-2
-            md:divide-x-2
-            divide-secondary
-            mb-16
+            flex-auto flex-nowrap
+            p-4
+            text-md
+            md:text-xl
+            lg:text-3xl
+            font-bold
+            text-center text-white
+            bg-primary
           "
         >
-          <div
-            class="
-              flex-auto flex-nowrap
-              p-4
-              text-3xl
-              font-bold
-              text-center text-white
-              bg-primary
-            "
-          >
-            İŞE ALIM PROGRAMI 2022
-          </div>
-          <div
-            class="
-              flex-auto flex-nowrap
-              p-4
-              text-3xl
-              font-medium
-              text-secondary text-center
-            "
-          >
-            JOB PROJE BAZLI STAJ 2022
-          </div>
-          <div
-            class="
-              flex-auto flex-nowrap
-              p-4
-              text-3xl
-              font-medium
-              text-secondary text-center
-            "
-          >
-            VJE 2022
-          </div>
+          İŞE ALIM PROGRAMI 2022
         </div>
-        <div class="w-full flex justify-end items-center mt-4 mx-auto px-32">
-          <p class="text-secondary text-base font-semibold">
-            PROGRAMIN DEVAMINI GÖRMEK İÇİN KAYDIR
-          </p>
-          <span class="inline-block ml-3"
-            ><RightArrowIcon class="stroke-current text-primary"
-          /></span>
+        <div
+          class="
+            flex-auto flex-nowrap
+            p-4
+            text-md
+            md:text-xl
+            lg:text-3xl
+            font-medium
+            text-secondary text-center
+          "
+        >
+          JOB PROJE BAZLI STAJ 2022
         </div>
-        <Carousel :items="currentProgramItems" />
-      </section>
+        <div
+          class="
+            flex-auto flex-nowrap
+            p-4
+            text-md
+            md:text-xl
+            lg:text-3xl
+            font-medium
+            text-secondary text-center
+          "
+        >
+          VJE 2022
+        </div>
+      </div>
+      <div
+        class="w-full flex justify-end items-center mt-4 mx-auto px-5 md:px-32"
+      >
+        <p class="text-secondary text-sm md:text-base font-semibold">
+          PROGRAMIN DEVAMINI GÖRMEK İÇİN KAYDIR
+        </p>
+        <span class="inline-block ml-3"
+          ><RightArrowIcon class="stroke-current text-primary"
+        /></span>
+      </div>
+      <Carousel :items="currentProgramItems" />
+    </section>
+    <template v-if="false">
       <section
         id="who-can-join"
         class="w-full bg-cover bg-center bg-no-repeat p-48"
