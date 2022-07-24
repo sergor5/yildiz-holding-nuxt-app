@@ -15,6 +15,7 @@
       transition-all
       active:scale-95
     "
+    :type="type"
   >
     <p class="drop-shadow-glow">
       <slot />
@@ -23,7 +24,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    type: { type: String, default: 'button' },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

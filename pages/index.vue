@@ -705,46 +705,40 @@
           lg:w-4/6
         "
       >
-        <form action="" class="mb-10">
+        <form name="job_application" class="mb-10" netlify>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-4">
             <input
               type="text"
-              name=""
-              id=""
+              name="name_surname"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
               placeholder="İsim Soyisim"
             />
             <input
               type="text"
-              name=""
-              id=""
+              name="birthdate"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
-              placeholder="Doğum Yılı - Gün & Ay & Yıl"
+              placeholder="Doğum Tarihi - Gün & Ay & Yıl"
             />
             <input
               type="tel"
-              name=""
-              id=""
+              name="phone_no"
               class="px-4 py-3 placeholder-secondary"
               placeholder="Telefon"
             />
             <input
               type="text"
-              name=""
-              id=""
+              name="expected_grad_date"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
               placeholder="Beklenen Mezuniyet Tarihi - Ay & Yıl"
             />
             <input
               type="email"
-              name=""
-              id=""
+              name="email"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
               placeholder="E-posta"
             />
             <select
-              name=""
-              id=""
+              name="dep_1"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
             >
               <option value="">Departman 1</option>
@@ -752,8 +746,7 @@
               <option value="">Departman 1.b</option>
             </select>
             <select
-              name=""
-              id=""
+              name="university"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
             >
               <option value="">Üniversite</option>
@@ -767,8 +760,7 @@
               <option value="">Dolar Sit Amet Üniversitesi</option>
             </select>
             <select
-              name=""
-              id=""
+              name="dep_2"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
             >
               <option value="">Departman 2</option>
@@ -777,8 +769,7 @@
             </select>
 
             <select
-              name=""
-              id=""
+              name="major"
               class="px-4 py-3 placeholder-secondar text-sm md:text-base"
             >
               <option value="">Bölüm (Yüksek Lisans Dahil)</option>
@@ -786,8 +777,7 @@
               <option value="">Güzel Sanatlar</option>
             </select>
             <select
-              name=""
-              id=""
+              name="dep_3"
               class="w-full h-full placeholder-secondary text-sm md:text-base"
             >
               <option value="">Departman 3</option>
@@ -796,8 +786,7 @@
             </select>
             <input
               type="text"
-              name=""
-              id=""
+              name="class"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
               placeholder="Sınıf"
             />
@@ -820,7 +809,9 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton class="whitespace-nowrap">HEMEN BAŞVUR</ActionButton>
+            <ActionButton class="whitespace-nowrap" type="submit"
+              >HEMEN BAŞVUR</ActionButton
+            >
           </DottedBordersWrapper>
         </div>
       </DottedBordersWrapper>
