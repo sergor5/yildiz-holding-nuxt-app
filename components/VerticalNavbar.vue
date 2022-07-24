@@ -54,28 +54,35 @@
         data-aos="fade"
         data-aos-delay="200"
       >
-        <LinkedinIcon
-          class="
-            fill-current
-            transition
-            text-white
-            hover:text-primary hover:cursor-pointer
-          "
-        />
+        <a
+          href="https://www.linkedin.com/company/yildizholding"
+          target="_blank"
+        >
+          <LinkedinIcon
+            class="
+              fill-current
+              transition
+              text-white
+              hover:text-primary hover:cursor-pointer
+            "
+          />
+        </a>
       </div>
       <div
         class="w-full h-16 py-2 grid place-items-center"
         data-aos="fade"
         data-aos-delay="250"
       >
-        <InstagramIcon
-          class="
-            fill-current
-            transition
-            text-white
-            hover:text-primary hover:cursor-pointer
-          "
-        />
+        <a href="https://www.instagram.com/yildizholding/" target="_blank">
+          <InstagramIcon
+            class="
+              fill-current
+              transition
+              text-white
+              hover:text-primary hover:cursor-pointer
+            "
+          />
+        </a>
       </div>
     </div>
   </div>

@@ -20,12 +20,35 @@
       </div>
       <div class="flex items-center">
         <div class="grid place-items-center p-4">
-          <LinkedinIcon class="fill-current text-white w-5 h-5 sm:w-7 sm:h-7" />
+          <a
+            href="https://www.linkedin.com/company/yildizholding"
+            target="_blank"
+          >
+            <LinkedinIcon
+              class="
+                fill-current
+                text-white
+                hover:text-secondary hover:cursor-pointer
+                w-5
+                h-5
+                sm:w-7 sm:h-7
+              "
+            />
+          </a>
         </div>
         <div class="grid place-items-center p-4">
-          <InstagramIcon
-            class="fill-current text-white w-5 h-5 sm:w-7 sm:h-7"
-          />
+          <a href="https://www.instagram.com/yildizholding/" target="_blank">
+            <InstagramIcon
+              class="
+                fill-current
+                text-white
+                hover:text-secondary hover:cursor-pointer
+                w-5
+                h-5
+                sm:w-7 sm:h-7
+              "
+            />
+          </a>
         </div>
       </div>
     </footer>
