@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        '3xl': '1920px',
+      },
       colors: {
         primary: {
           DEFAULT: '#EA2044',
