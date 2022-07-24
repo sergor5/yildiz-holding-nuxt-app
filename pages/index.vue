@@ -858,130 +858,170 @@
         </div>
       </DottedBordersWrapper>
     </section>
-    <template v-if="false">
-      <section
-        id="faq"
-        class="
-          w-full
-          bg-white
-          flex flex-col
-          items-center
-          pt-10
-          pb-32
-          px-16
-          gap-10
-        "
+    <section
+      id="faq"
+      class="
+        w-full
+        bg-white
+        flex flex-col
+        items-center
+        pt-10
+        pb-16
+        md:pb-32
+        px-8
+        md:px-16
+        gap-10
+      "
+    >
+      <h2
+        class="text-3xl md:text-6xl font-extrabold text-primary text-center"
+        style="line-height: 1.2"
       >
-        <h2
-          class="text-6xl font-extrabold text-primary text-center"
-          style="line-height: 1.2"
-        >
-          SIKÇA SORULAN<br />
-          SORULAR
-        </h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div class="flex">
-            <div
-              class="flex-shrink-0 grid place-items-center w-20 h-20 bg-primary"
-            >
-              <div class="w-2.5 h-2.5 bg-white"></div>
-            </div>
-            <div class="border border-primary p-5 flex flex-col gap-5">
-              <h3 class="text-4xl text-secondary font-bold">
-                Programa başvurduktan sonra hangi aşamalara dahil olacağım?
-              </h3>
-              <div class="w-1/5 h-1 bg-yellow-700"></div>
-              <p class="text-2xl font-medium pl-8">
-                Programa başvurduktan sonra, online değerlendirme aşamalarımızla
-                ilgili seni bilgilendireceğiz. Aşamaları olumlu tamamlayan
-                adaylarımız, çalışmak veya staj yapmak istedikleri departmanın
-                yöneticileri ile birebir online mülakat gerçekleştirerek
-                süreçlerini tamamlayacaklar.
-              </p>
-            </div>
+        SIKÇA SORULAN<br />
+        SORULAR
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
+        <div class="flex">
+          <div
+            class="
+              flex-shrink-0
+              grid
+              place-items-center
+              w-16
+              h-16
+              md:w-20 md:h-20
+              bg-primary
+            "
+          >
+            <div class="w-2.5 h-2.5 bg-white"></div>
           </div>
-          <div class="flex">
-            <div
-              class="flex-shrink-0 grid place-items-center w-20 h-20 bg-primary"
-            >
-              <div class="w-2.5 h-2.5 bg-white"></div>
-            </div>
-            <div class="border border-primary p-5 flex flex-col gap-5">
-              <h3 class="text-4xl text-secondary font-bold">
-                JOB bana neler kazandıracak?
-              </h3>
-              <div class="w-1/5 h-1 bg-yellow-700"></div>
-              <p class="text-2xl font-medium pl-8">
-                JOB programı ile global şirket yapısını daha yakından görebilir,
-                farklı fonksiyonlarda çalışma deneyimi elde edebilir ve
-                sunduğumuz gelişim programları ile kariyerine güçlü adımlarla
-                başlayabilirsin!
-              </p>
-            </div>
-          </div>
-          <div class="flex">
-            <div
-              class="flex-shrink-0 grid place-items-center w-20 h-20 bg-primary"
-            >
-              <div class="w-2.5 h-2.5 bg-white"></div>
-            </div>
-            <div class="border border-primary p-5 flex flex-col gap-5">
-              <h3 class="text-4xl text-secondary font-bold">
-                Staj programının süresi ne olacak?
-              </h3>
-              <div class="w-1/5 h-1 bg-yellow-700"></div>
-              <p class="text-2xl font-medium pl-8">
-                Virtual JOB Experience gelişim stajımız online 1 ay sürecek
-                olup, detaylı departman tanıtımları, networking fırsatı ve
-                gelişim programlarından oluşmaktadır. JOB Proje Bazlı stajımız 2
-                ay sürecek olup, departmanlarda çalışma deneyimi olarak
-                gerçekleşecektir.
-              </p>
-            </div>
-          </div>
-          <div class="flex">
-            <div
-              class="flex-shrink-0 grid place-items-center w-20 h-20 bg-primary"
-            >
-              <div class="w-2.5 h-2.5 bg-white"></div>
-            </div>
-            <div class="border border-primary p-5 flex flex-col gap-5">
-              <h3 class="text-4xl text-secondary font-bold">
-                Online mı, fiziksel olarak mı gerçekleştirilecek?
-              </h3>
-              <div class="w-1/5 h-1 bg-yellow-700"></div>
-              <p class="text-2xl font-medium pl-8">
-                Virtual JOB Experience gelişim stajı online olarak, JOB Proje
-                Bazlı Staj ise stajın gerçekleşeceği departmanın çalışma şekline
-                uygun olarak gerçekleşecektir.
-              </p>
-            </div>
-          </div>
-          <div class="flex">
-            <div
-              class="flex-shrink-0 grid place-items-center w-20 h-20 bg-primary"
-            >
-              <div class="w-2.5 h-2.5 bg-white"></div>
-            </div>
-            <div class="border border-primary p-5 flex flex-col gap-5">
-              <h3 class="text-4xl text-secondary font-bold">
-                Herhangi bir sorun yaşarsam nasıl iletişime geçebilirim?
-              </h3>
-              <div class="w-1/5 h-1 bg-yellow-700"></div>
-              <p class="text-2xl font-medium pl-8">
-                Tüm soruların için
-                <strong class="text-secondary"
-                  ><a href="mailto:job@yildizholding.com.tr"
-                    >job@yildizholding.com.tr</a
-                  ></strong
-                >
-                adresine mail atabilirsin.
-              </p>
-            </div>
+          <div class="border border-primary p-5 flex flex-col gap-5">
+            <h3 class="text-2xl md:text-4xl text-secondary font-bold">
+              Programa başvurduktan sonra hangi aşamalara dahil olacağım?
+            </h3>
+            <div class="w-1/5 h-1 bg-yellow-700"></div>
+            <p class="text-base md:text-2xl font-medium pl-8">
+              Programa başvurduktan sonra, online değerlendirme aşamalarımızla
+              ilgili seni bilgilendireceğiz. Aşamaları olumlu tamamlayan
+              adaylarımız, çalışmak veya staj yapmak istedikleri departmanın
+              yöneticileri ile birebir online mülakat gerçekleştirerek
+              süreçlerini tamamlayacaklar.
+            </p>
           </div>
         </div>
-      </section>
-    </template>
+        <div class="flex">
+          <div
+            class="
+              flex-shrink-0
+              grid
+              place-items-center
+              w-16
+              h-16
+              md:w-20 md:h-20
+              bg-primary
+            "
+          >
+            <div class="w-2.5 h-2.5 bg-white"></div>
+          </div>
+          <div class="border border-primary p-5 flex flex-col gap-5">
+            <h3 class="text-2xl md:text-4xl text-secondary font-bold">
+              JOB bana neler kazandıracak?
+            </h3>
+            <div class="w-1/5 h-1 bg-yellow-700"></div>
+            <p class="text-base md:text-2xl font-medium pl-8">
+              JOB programı ile global şirket yapısını daha yakından görebilir,
+              farklı fonksiyonlarda çalışma deneyimi elde edebilir ve sunduğumuz
+              gelişim programları ile kariyerine güçlü adımlarla
+              başlayabilirsin!
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <div
+            class="
+              flex-shrink-0
+              grid
+              place-items-center
+              w-16
+              h-16
+              md:w-20 md:h-20
+              bg-primary
+            "
+          >
+            <div class="w-2.5 h-2.5 bg-white"></div>
+          </div>
+          <div class="border border-primary p-5 flex flex-col gap-5">
+            <h3 class="text-2xl md:text-4xl text-secondary font-bold">
+              Staj programının süresi ne olacak?
+            </h3>
+            <div class="w-1/5 h-1 bg-yellow-700"></div>
+            <p class="text-base md:text-2xl font-medium pl-8">
+              Virtual JOB Experience gelişim stajımız online 1 ay sürecek olup,
+              detaylı departman tanıtımları, networking fırsatı ve gelişim
+              programlarından oluşmaktadır. JOB Proje Bazlı stajımız 2 ay
+              sürecek olup, departmanlarda çalışma deneyimi olarak
+              gerçekleşecektir.
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <div
+            class="
+              flex-shrink-0
+              grid
+              place-items-center
+              w-16
+              h-16
+              md:w-20 md:h-20
+              bg-primary
+            "
+          >
+            <div class="w-2.5 h-2.5 bg-white"></div>
+          </div>
+          <div class="border border-primary p-5 flex flex-col gap-5">
+            <h3 class="text-2xl md:text-4xl text-secondary font-bold">
+              Online mı, fiziksel olarak mı gerçekleştirilecek?
+            </h3>
+            <div class="w-1/5 h-1 bg-yellow-700"></div>
+            <p class="text-base md:text-2xl font-medium pl-8">
+              Virtual JOB Experience gelişim stajı online olarak, JOB Proje
+              Bazlı Staj ise stajın gerçekleşeceği departmanın çalışma şekline
+              uygun olarak gerçekleşecektir.
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <div
+            class="
+              flex-shrink-0
+              grid
+              place-items-center
+              w-16
+              h-16
+              md:w-20 md:h-20
+              bg-primary
+            "
+          >
+            <div class="w-2.5 h-2.5 bg-white"></div>
+          </div>
+          <div class="border border-primary p-5 flex flex-col gap-5">
+            <h3 class="text-2xl md:text-4xl text-secondary font-bold">
+              Herhangi bir sorun yaşarsam nasıl iletişime geçebilirim?
+            </h3>
+            <div class="w-1/5 h-1 bg-yellow-700"></div>
+            <p class="text-base md:text-2xl font-medium pl-8">
+              Tüm soruların için
+              <strong class="text-secondary"
+                ><a href="mailto:job@yildizholding.com.tr"
+                  >job@yildizholding.com.tr</a
+                ></strong
+              >
+              adresine mail atabilirsin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
