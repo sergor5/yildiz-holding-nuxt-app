@@ -429,41 +429,103 @@
         </div>
       </div>
     </section>
-    <template v-if="false">
-      <section
-        id="application-process"
-        class="w-full bg-white flex flex-col items-center p-10 pb-32 gap-4"
+    <section
+      id="application-process"
+      class="w-full bg-white flex flex-col items-center p-5 pb-28 gap-4"
+    >
+      <h2
+        class="
+          text-3xl
+          md:text-4xl
+          lg:text-6xl
+          font-extrabold
+          text-secondary text-center
+        "
+        style="line-height: 1.2"
       >
-        <h2
-          class="text-6xl font-extrabold text-secondary text-center"
-          style="line-height: 1.2"
-        >
-          BAŞVURU SÜREÇLERİ
-        </h2>
-        <p class="text-primary text-center text-4xl font-medium w-2/5">
-          Başvurmak ve bu kariyer fırsatını yakalamak için aşağıdaki butona
-          tıkla!
-        </p>
+        BAŞVURU SÜREÇLERİ
+      </h2>
+      <p
+        class="
+          text-primary text-center text-xl
+          md:text-2xl
+          lg:text-4xl
+          font-medium
+          w-5/6
+          lg:w-3/5
+          xl:w-2/5
+        "
+      >
+        Başvurmak ve bu kariyer fırsatını yakalamak için aşağıdaki butona tıkla!
+      </p>
+      <div
+        class="
+          application-process-card
+          bg-gray-100
+          relative
+          lg:h-96
+          w-11/12
+          2xl:w-5/6
+        "
+      >
         <div
           class="
-            application-process-card
-            bg-gray-100
-            relative
-            h-96
-            w-11/12
-            lg:w-5/6
+            flex flex-col
+            lg:flex-row
+            pt-10
+            md:pt-16
+            lg:pt-24
+            pb-20
+            h-full
+            gap-8
+            lg:gap-2
           "
         >
-          <div class="flex flex-col pt-16 lg:pt-24 pb-10 h-full">
-            <div class="flex flex-1 gap-2 justify-center lg:pl-14 w-4/5">
-              <div class="flex flex-col h-full">
-                <div class="w-20 h-20 grid place-items-center bg-primary">
-                  <StarOutlineIcon />
+          <div class="flex flex-1 gap-2 justify-center lg:justify-end">
+            <div
+              class="
+                text-2xl
+                md:text-3xl
+                3xl:text-5xl
+                text-secondary
+                pt-6
+                pl-4
+                relative
+                w-52
+                xl:w-72
+                3xl:w-96
+              "
+            >
+              <div
+                class="
+                  flex flex-col
+                  absolute
+                  top-0
+                  left-0
+                  -translate-x-14
+                  md:-translate-x-16
+                  xl:-translate-x-20
+                  h-full
+                "
+              >
+                <div
+                  class="
+                    w-14
+                    h-14
+                    md:w-16 md:h-16
+                    xl:w-20 xl:h-20
+                    grid
+                    place-items-center
+                    bg-primary
+                    flex-shrink-0
+                  "
+                >
+                  <StarOutlineIcon class="w-8 h-8" />
                 </div>
                 <div
                   class="
                     w-full
-                    h-1/2
+                    h-full
                     border-r border-primary border-opacity-50
                     relative
                   "
@@ -476,102 +538,175 @@
                       absolute
                       bottom-0
                       right-0
-                      translate-x-2.5
+                      translate-x-2.5 translate-y-2.5
                     "
                   ></span>
                 </div>
               </div>
-              <div class="text-5xl text-secondary pt-6">
-                Online <br /><strong>Değerlendirme Aşamaları</strong>
-              </div>
-            </div>
-            <div class="flex flex-1 gap-2 justify-center">
-              <div class="flex flex-col">
-                <div class="w-20 h-20 grid place-items-center bg-primary">
-                  <TentIcon />
-                </div>
-                <div
-                  class="
-                    w-full
-                    h-1/2
-                    border-r border-primary border-opacity-50
-                    relative
-                  "
-                >
-                  <span
-                    class="
-                      w-2.5
-                      h-2.5
-                      bg-primary
-                      absolute
-                      bottom-0
-                      right-0
-                      translate-x-2.5
-                    "
-                  ></span>
-                </div>
-              </div>
-              <div class="text-5xl text-secondary pt-6">
-                Yetenek <br /><strong>Kampı</strong>
-              </div>
-            </div>
-            <div class="flex flex-1 gap-2 justify-center">
-              <div class="flex flex-col">
-                <div class="w-20 h-20 grid place-items-center bg-primary">
-                  <LaptopIcon />
-                </div>
-                <div
-                  class="
-                    w-full
-                    h-1/2
-                    border-r border-primary border-opacity-50
-                    relative
-                  "
-                >
-                  <span
-                    class="
-                      w-2.5
-                      h-2.5
-                      bg-primary
-                      absolute
-                      bottom-0
-                      right-0
-                      translate-x-2.5
-                    "
-                  ></span>
-                </div>
-              </div>
-              <div class="text-5xl text-secondary pt-6">
-                Online <br /><strong>Mülakat</strong>
-              </div>
+              Online <br /><strong
+                >Değerlendirme<br />
+                Aşamaları</strong
+              >
             </div>
           </div>
-          <div
-            class="
-              absolute
-              bottom-0
-              left-0
-              w-full
-              z-10
-              h-0
-              flex
-              justify-center
-              items-center
-            "
-          >
-            <DottedBordersWrapper
-              :borderOpacity="0.6"
-              class="active:scale-95 transition-transform"
+          <div class="flex flex-1 gap-2 justify-center lg:justify-end">
+            <div
+              class="
+                text-2xl
+                md:text-3xl
+                3xl:text-5xl
+                text-secondary
+                pt-6
+                pl-4
+                relative
+                w-52
+                xl:w-72
+                3xl:w-96
+              "
             >
-              <ActionButton
-                class="whitespace-nowrap"
-                v-scroll-to="'#application-form'"
-                >HEMEN BAŞVUR</ActionButton
+              <div
+                class="
+                  flex flex-col
+                  absolute
+                  top-0
+                  left-0
+                  -translate-x-14
+                  md:-translate-x-16
+                  xl:-translate-x-20
+                  h-full
+                "
               >
-            </DottedBordersWrapper>
+                <div
+                  class="
+                    w-14
+                    h-14
+                    md:w-16 md:h-16
+                    xl:w-20 xl:h-20
+                    grid
+                    place-items-center
+                    bg-primary
+                    flex-shrink-0
+                  "
+                >
+                  <TentIcon class="w-8 h-8" />
+                </div>
+                <div
+                  class="
+                    w-full
+                    h-full
+                    border-r border-primary border-opacity-50
+                    relative
+                  "
+                >
+                  <span
+                    class="
+                      w-2.5
+                      h-2.5
+                      bg-primary
+                      absolute
+                      bottom-0
+                      right-0
+                      translate-x-2.5 translate-y-2.5
+                    "
+                  ></span>
+                </div>
+              </div>
+              Yetenek <br /><strong>Kampı</strong>
+            </div>
+          </div>
+          <div class="flex flex-1 gap-2 justify-center lg:justify-end">
+            <div
+              class="
+                text-2xl
+                md:text-3xl
+                3xl:text-5xl
+                text-secondary
+                pt-6
+                pl-4
+                relative
+                w-52
+                xl:w-72
+                3xl:w-96
+              "
+            >
+              <div
+                class="
+                  flex flex-col
+                  absolute
+                  top-0
+                  left-0
+                  -translate-x-14
+                  md:-translate-x-16
+                  xl:-translate-x-20
+                  h-full
+                "
+              >
+                <div
+                  class="
+                    w-14
+                    h-14
+                    md:w-16 md:h-16
+                    xl:w-20 xl:h-20
+                    grid
+                    place-items-center
+                    bg-primary
+                    flex-shrink-0
+                  "
+                >
+                  <LaptopIcon class="w-8 h-8" />
+                </div>
+                <div
+                  class="
+                    w-full
+                    h-full
+                    border-r border-primary border-opacity-50
+                    relative
+                  "
+                >
+                  <span
+                    class="
+                      w-2.5
+                      h-2.5
+                      bg-primary
+                      absolute
+                      bottom-0
+                      right-0
+                      translate-x-2.5 translate-y-2.5
+                    "
+                  ></span>
+                </div>
+              </div>
+              Online <br /><strong>Mülakat</strong>
+            </div>
           </div>
         </div>
-      </section>
+        <div
+          class="
+            absolute
+            bottom-0
+            left-0
+            w-full
+            z-10
+            h-0
+            flex
+            justify-center
+            items-center
+          "
+        >
+          <DottedBordersWrapper
+            :borderOpacity="0.6"
+            class="active:scale-95 transition-transform"
+          >
+            <ActionButton
+              class="whitespace-nowrap"
+              v-scroll-to="'#application-form'"
+              >HEMEN BAŞVUR</ActionButton
+            >
+          </DottedBordersWrapper>
+        </div>
+      </div>
+    </section>
+    <template v-if="false">
       <section
         id="application-form"
         class="w-full flex flex-col items-center gap-4 px-10 pt-16 pb-36"
