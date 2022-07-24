@@ -3,7 +3,8 @@
     class="
       fixed
       top-2
-      right-2
+      right-4
+      sm:right-6
       md:top-8 md:right-8
       flex flex-col
       justify-between
@@ -93,8 +94,7 @@ export default {
   data() {
     return {
       selectedId: 0,
-      visible: true,
-      menuOpen: true,
+      menuOpen: false,
       windowWidth: 768,
       navItems: [
         { id: 0, text: 'HAKKINDA', url: '#about' },
