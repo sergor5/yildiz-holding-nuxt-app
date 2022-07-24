@@ -39,7 +39,7 @@
                   class="
                     drop-shadow-glow
                     text-3xl
-                    md:text-7xl
+                    md:text-6xl
                     font-black
                     text-white
                   "

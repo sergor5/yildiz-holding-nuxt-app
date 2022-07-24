@@ -158,72 +158,7 @@
         overflow-x-hidden
       "
     >
-      <div
-        class="
-          w-4/5
-          xl:w-3/5
-          mx-auto
-          border border-secondary
-          flex flex-col
-          md:flex-row
-          divide-y-2
-          md:divide-x-2
-          divide-secondary
-          mb-16
-        "
-      >
-        <div
-          class="
-            flex-auto flex-nowrap
-            p-4
-            text-md
-            md:text-xl
-            lg:text-3xl
-            font-bold
-            text-center text-white
-            bg-primary
-          "
-        >
-          İŞE ALIM PROGRAMI 2022
-        </div>
-        <div
-          class="
-            flex-auto flex-nowrap
-            p-4
-            text-md
-            md:text-xl
-            lg:text-3xl
-            font-medium
-            text-secondary text-center
-          "
-        >
-          JOB PROJE BAZLI STAJ 2022
-        </div>
-        <div
-          class="
-            flex-auto flex-nowrap
-            p-4
-            text-md
-            md:text-xl
-            lg:text-3xl
-            font-medium
-            text-secondary text-center
-          "
-        >
-          VJE 2022
-        </div>
-      </div>
-      <div
-        class="w-full flex justify-end items-center mt-4 mx-auto px-5 md:px-32"
-      >
-        <p class="text-secondary text-sm md:text-base font-semibold">
-          PROGRAMIN DEVAMINI GÖRMEK İÇİN KAYDIR
-        </p>
-        <span class="inline-block ml-3"
-          ><RightArrowIcon class="stroke-current text-primary"
-        /></span>
-      </div>
-      <Carousel :items="currentProgramItems" />
+      <ProgramsTabCarousel />
     </section>
     <section
       id="who-can-join"
@@ -1032,31 +967,6 @@ export default {
   mixins: [aosMixin],
   data() {
     return {
-      programCarouselData: {
-        selectedTabIndex: 0,
-        items: [
-          [
-            {
-              icon: 1,
-              upperText: 'Online Genel Yetenek Testi',
-              lowerText: 'Online İngilizce Testi',
-            },
-            {
-              icon: 2,
-              upperText: 'Online Video Mülakat',
-              lowerText: 'Online Temel Yetkinlik Envanteri',
-            },
-            { icon: 3, upperText: 'Online Case Challenge', lowerText: '' },
-            { icon: 4, upperText: 'Genel Yetenek Kampı', lowerText: '' },
-            {
-              icon: 5,
-              upperText: 'Departmanlar ile Online Mülakat',
-              lowerText: '',
-            },
-            { icon: 6, upperText: 'Yıldız Ol ve Parla', lowerText: '' },
-          ],
-        ],
-      },
       whatWillIWinCarouselItems: [
         {
           icon: 'UniHatIcon',
@@ -1095,13 +1005,6 @@ export default {
         },
       ],
     }
-  },
-  computed: {
-    currentProgramItems() {
-      return this.programCarouselData.items[
-        this.programCarouselData.selectedTabIndex
-      ]
-    },
   },
 }
 </script>
