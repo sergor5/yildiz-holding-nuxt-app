@@ -706,124 +706,159 @@
         </div>
       </div>
     </section>
-    <template v-if="false">
-      <section
-        id="application-form"
-        class="w-full flex flex-col items-center gap-4 px-10 pt-16 pb-36"
+    <section
+      id="application-form"
+      class="
+        w-full
+        flex flex-col
+        items-center
+        gap-4
+        px-2
+        md:px-10
+        pt-10
+        md:pt-16
+        pb-36
+      "
+    >
+      <h2
+        class="text-3xl md:text-6xl font-extrabold text-white text-center"
+        style="line-height: 1.2"
       >
-        <h2
-          class="text-6xl font-extrabold text-white text-center"
-          style="line-height: 1.2"
-        >
-          BAŞVURU FORMU
-        </h2>
-        <DottedBordersWrapper
-          borderColor="border-white"
-          dotColor="bg-white"
-          class="bg-white bg-opacity-10 backdrop-blur-sm text-4xl p-10 w-4/6"
-        >
-          <form action="" class="mb-10">
-            <div class="grid grid-cols-2 gap-x-3 gap-y-4">
-              <input
-                type="text"
-                name=""
-                id=""
-                class="px-4 py-3 placeholder-secondary"
-                placeholder="İsim Soyisim"
-              />
-              <input
-                type="text"
-                name=""
-                id=""
-                class="px-4 py-3 placeholder-secondary"
-                placeholder="Doğum Yılı - Gün & Ay & Yıl"
-              />
-              <input
-                type="tel"
-                name=""
-                id=""
-                class="px-4 py-3 placeholder-secondary"
-                placeholder="Telefon"
-              />
-              <input
-                type="text"
-                name=""
-                id=""
-                class="px-4 py-3 placeholder-secondary"
-                placeholder="Beklenen Mezuniyet Tarihi - Ay & Yıl"
-              />
-              <input
-                type="email"
-                name=""
-                id=""
-                class="px-4 py-3 placeholder-secondary"
-                placeholder="E-posta"
-              />
-              <select name="" id="" class="px-4 py-3 placeholder-secondary">
-                <option value="">Departman 1</option>
-                <option value="">Departman 1.a</option>
-                <option value="">Departman 1.b</option>
-              </select>
-              <select name="" id="" class="px-4 py-3 placeholder-secondary">
-                <option value="">Üniversite</option>
-                <option value="">İstanbul Aydın Üniversitesi</option>
-                <option value="">Boğaziçi Üniversitesi</option>
-                <option value="">Lorem Ipsum Üniversitesi</option>
-                <option value="">Dolar Sit Amet Üniversitesi</option>
-                <option value="">İstanbul Aydın Üniversitesi</option>
-                <option value="">Boğaziçi Üniversitesi</option>
-                <option value="">Lorem Ipsum Üniversitesi</option>
-                <option value="">Dolar Sit Amet Üniversitesi</option>
-              </select>
-              <select name="" id="" class="px-4 py-3 placeholder-secondary">
-                <option value="">Departman 2</option>
-                <option value="">Departman 2.a</option>
-                <option value="">Departman 2.b</option>
-              </select>
-
-              <select name="" id="" class="px-4 py-3 placeholder-secondar">
-                <option value="">Bölüm (Yüksek Lisans Dahil)</option>
-                <option value="">Mühendislik</option>
-                <option value="">Güzel Sanatlar</option>
-              </select>
-              <select name="" id="" class="w-full h-full placeholder-secondary">
-                <option value="">Departman 3</option>
-                <option value="">Departman 3.a</option>
-                <option value="">Departman 3.b</option>
-              </select>
-              <input
-                type="text"
-                name=""
-                id=""
-                class="px-4 py-3 placeholder-secondary"
-                placeholder="Sınıf"
-              />
-            </div>
-          </form>
-          <div
-            class="
-              absolute
-              bottom-0
-              left-0
-              w-full
-              z-10
-              h-0
-              flex
-              justify-center
-              items-center
-            "
-          >
-            <DottedBordersWrapper
-              :borderOpacity="0.6"
-              class="active:scale-95 transition-transform"
+        BAŞVURU FORMU
+      </h2>
+      <DottedBordersWrapper
+        borderColor="border-white"
+        dotColor="bg-white"
+        class="
+          bg-white bg-opacity-10
+          backdrop-blur-sm
+          p-5
+          md:p-10
+          w-11/12
+          lg:w-4/6
+        "
+      >
+        <form action="" class="mb-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-4">
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary text-sm md:text-base"
+              placeholder="İsim Soyisim"
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary text-sm md:text-base"
+              placeholder="Doğum Yılı - Gün & Ay & Yıl"
+            />
+            <input
+              type="tel"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary"
+              placeholder="Telefon"
+            />
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary text-sm md:text-base"
+              placeholder="Beklenen Mezuniyet Tarihi - Ay & Yıl"
+            />
+            <input
+              type="email"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary text-sm md:text-base"
+              placeholder="E-posta"
+            />
+            <select
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary text-sm md:text-base"
             >
-              <ActionButton class="whitespace-nowrap"
-                >HEMEN BAŞVUR</ActionButton
-              >
-            </DottedBordersWrapper>
+              <option value="">Departman 1</option>
+              <option value="">Departman 1.a</option>
+              <option value="">Departman 1.b</option>
+            </select>
+            <select
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary text-sm md:text-base"
+            >
+              <option value="">Üniversite</option>
+              <option value="">İstanbul Aydın Üniversitesi</option>
+              <option value="">Boğaziçi Üniversitesi</option>
+              <option value="">Lorem Ipsum Üniversitesi</option>
+              <option value="">Dolar Sit Amet Üniversitesi</option>
+              <option value="">İstanbul Aydın Üniversitesi</option>
+              <option value="">Boğaziçi Üniversitesi</option>
+              <option value="">Lorem Ipsum Üniversitesi</option>
+              <option value="">Dolar Sit Amet Üniversitesi</option>
+            </select>
+            <select
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary text-sm md:text-base"
+            >
+              <option value="">Departman 2</option>
+              <option value="">Departman 2.a</option>
+              <option value="">Departman 2.b</option>
+            </select>
+
+            <select
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondar text-sm md:text-base"
+            >
+              <option value="">Bölüm (Yüksek Lisans Dahil)</option>
+              <option value="">Mühendislik</option>
+              <option value="">Güzel Sanatlar</option>
+            </select>
+            <select
+              name=""
+              id=""
+              class="w-full h-full placeholder-secondary text-sm md:text-base"
+            >
+              <option value="">Departman 3</option>
+              <option value="">Departman 3.a</option>
+              <option value="">Departman 3.b</option>
+            </select>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="px-4 py-3 placeholder-secondary text-sm md:text-base"
+              placeholder="Sınıf"
+            />
           </div>
-        </DottedBordersWrapper>
-      </section>
+        </form>
+        <div
+          class="
+            absolute
+            bottom-0
+            left-0
+            w-full
+            z-10
+            h-0
+            flex
+            justify-center
+            items-center
+          "
+        >
+          <DottedBordersWrapper
+            :borderOpacity="0.6"
+            class="active:scale-95 transition-transform"
+          >
+            <ActionButton class="whitespace-nowrap">HEMEN BAŞVUR</ActionButton>
+          </DottedBordersWrapper>
+        </div>
+      </DottedBordersWrapper>
+    </section>
+    <template v-if="false">
       <section
         id="faq"
         class="
