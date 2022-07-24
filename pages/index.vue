@@ -802,6 +802,7 @@
               placeholder="Sınıf"
             />
           </div>
+          <input type="hidden" name="form-name" value="job_application" />
         </form>
         <div
           class="
