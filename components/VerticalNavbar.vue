@@ -17,7 +17,7 @@
     "
     :class="{
       'h-3/5': menuOpen,
-      'h-[9%]': !menuOpen,
+      'h-[91px]': !menuOpen,
       'w-11/12': menuOpen && isMobile,
       'w-[91px]': !menuOpen && isMobile,
     }"
