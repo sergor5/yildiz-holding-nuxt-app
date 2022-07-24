@@ -94,8 +94,7 @@ export default {
   data() {
     return {
       selectedId: 0,
-      visible: true,
-      menuOpen: true,
+      menuOpen: false,
       windowWidth: 768,
       navItems: [
         { id: 0, text: 'HAKKINDA', url: '#about' },

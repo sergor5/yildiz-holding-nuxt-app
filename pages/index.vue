@@ -787,20 +787,71 @@
               <option value="major_eng">Mühendislik</option>
               <option value="major_art">Güzel Sanatlar</option>
             </select>
-            <select
-              name="dep_3"
-              class="w-full h-full placeholder-secondary text-sm md:text-base"
-            >
-              <option value="">Departman 3</option>
-              <option value="dep_3_a">Departman 3.a</option>
-              <option value="dep_3_b">Departman 3.b</option>
-            </select>
+            <div class="relative">
+              <select
+                name="dep_3"
+                class="w-full h-full placeholder-secondary text-sm md:text-base"
+              >
+                <option value="">Departman 3</option>
+                <option value="dep_3_a">Departman 3.a</option>
+                <option value="dep_3_b">Departman 3.b</option>
+              </select>
+
+              <span
+                class="
+                  absolute
+                  bottom-[-1.125rem]
+                  left-1
+                  text-xs text-white
+                  whitespace-nowrap
+                "
+                >Öncelik sıranıza göre ve 3 adet departman belirtiniz.</span
+              >
+            </div>
             <input
               type="text"
               name="class"
               class="px-4 py-3 placeholder-secondary text-sm md:text-base"
               placeholder="Sınıf"
             />
+            <div class="flex flex-col" style="height: fit-content">
+              <div class="flex items-center pt-1">
+                <p class="whitespace-nowrap text-white text-xl">CV Ekle</p>
+                <label
+                  class="
+                    ml-3
+                    w-6
+                    h-6
+                    bg-white
+                    text-primary text-xl
+                    hover:bg-gray-300
+                    active:bg-gray-500
+                    grid
+                    place-items-center
+                    flex-shrink-0
+                  "
+                  for="file"
+                >
+                  +
+                </label>
+                <span
+                  class="text-white text-sm pl-2"
+                  ref="fileInputLabel"
+                ></span>
+              </div>
+              <span class="bottom-0 left-0 text-xs text-white"
+                >(pdf, doc, docx, csv, xlsx, xls, ppt formatında ve 10MB den
+                aşağı olmalıdır.)</span
+              >
+              <input
+                id="file"
+                name="file"
+                style="visibility: hidden; width: 0; height: 0"
+                type="file"
+                accept=".pdf, .doc, .docx, .csv, .xlsx, .xls, .ppt"
+                @change="onFileChange"
+              />
+            </div>
           </div>
           <input type="hidden" name="form-name" value="job_application" />
         </form>
@@ -1044,6 +1095,11 @@ export default {
   methods: {
     submitForm() {
       this.$refs.applicationForm.submit()
+    },
+    onFileChange(e) {
+      if (e.target.files.length > 0) {
+        this.$refs.fileInputLabel.innerText = e.target.files[0].name
+      }
     },
   },
 }
