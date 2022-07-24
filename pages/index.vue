@@ -299,76 +299,137 @@
         </div>
       </div>
     </section>
-    <template v-if="false">
-      <section
-        id="what-will-i-win"
-        class="w-full bg-gray-300 bg-cover bg-center bg-no-repeat pt-32 mb-52"
-        style="overflow-x: clip"
-      >
-        <div class="flex w-4/5 gap-6 px-32">
-          <div>
-            <div class="w-40 h-40 bg-white grid place-items-center">
-              <HandIcon class="w-24 h-24 fill-current text-primary" />
-            </div>
-          </div>
-          <div class="flex flex-col justify-center">
-            <h2
-              class="text-6xl font-extrabold text-secondary"
-              style="line-height: 1.3"
-            >
-              NELER <br />KAZANACAĞIM?
-            </h2>
-            <p class="text-primary text-4xl font-medium pl-20 w-5/6">
-              Kariyerine güçlü bir başlangıç yapmak için ihtiyacın olacak tüm
-              gelişim alanları!
-            </p>
+    <section
+      id="what-will-i-win"
+      class="
+        w-full
+        bg-gray-300 bg-cover bg-center bg-no-repeat
+        pt-16
+        md:pt-24
+        xl:pt-32
+        mb-52
+      "
+      style="overflow-x: clip"
+    >
+      <div class="flex w-4/5 gap-6 md:px-10 xl:px-24 2xl:px-32 mx-auto">
+        <div>
+          <div
+            class="
+              w-16
+              h-16
+              md:w-24 md:h-24
+              xl:w-40 xl:h-40
+              bg-white
+              grid
+              place-items-center
+            "
+          >
+            <HandIcon
+              class="
+                w-9
+                h-9
+                md:w-16 md:h-16
+                xl:w-24 xl:h-24
+                fill-current
+                text-primary
+              "
+            />
           </div>
         </div>
-        <div class="w-full flex justify-end items-center mt-4 px-32">
-          <p class="text-secondary text-base font-semibold">
-            KAZANÇLARIN DEVAMINI GÖRMEK İÇİN KAYDIR
+        <div class="flex flex-col justify-center">
+          <h2
+            class="
+              text-2xl
+              md:text-4xl
+              xl:text-6xl
+              font-extrabold
+              text-secondary
+            "
+            style="line-height: 1.3"
+          >
+            NELER <br />KAZANACAĞIM?
+          </h2>
+          <p
+            class="
+              text-primary text-base
+              md:text-2xl
+              xl:text-4xl
+              font-medium
+              pl-0
+              md:pl-8
+              xl:pl-20
+              w-5/6
+            "
+          >
+            Kariyerine güçlü bir başlangıç yapmak için ihtiyacın olacak tüm
+            gelişim alanları!
           </p>
-          <span class="inline-block ml-3"
-            ><RightArrowIcon class="stroke-current text-primary"
-          /></span>
         </div>
-        <div class="relative h-[450px]">
-          <div class="absolute w-full">
-            <Carousel :items="whatWillIWinCarouselItems" class="bottom-0 py-20">
-              <template #iconbox="item">
-                <div class="w-full h-5">
-                  <span
+      </div>
+      <div
+        class="w-full flex justify-end items-center mt-4 mx-auto px-5 md:px-32"
+      >
+        <p class="text-secondary text-sm md:text-base font-semibold">
+          KAZANÇLARIN DEVAMINI GÖRMEK İÇİN KAYDIR
+        </p>
+        <span class="inline-block ml-3"
+          ><RightArrowIcon class="stroke-current text-primary"
+        /></span>
+      </div>
+      <div class="relative h-[360px] md:h-[450px]">
+        <div class="absolute w-full">
+          <Carousel
+            :items="whatWillIWinCarouselItems"
+            class="bottom-0 py-16 md:py-20"
+          >
+            <template #iconbox="item">
+              <div class="w-full h-5">
+                <span
+                  class="
+                    absolute
+                    w-16
+                    h-16
+                    md:w-28 md:h-28
+                    grid
+                    place-items-center
+                    bg-primary
+                    left-10
+                    top-0
+                    -translate-y-1/2
+                  "
+                >
+                  <p
                     class="
-                      absolute
-                      w-28
-                      h-28
+                      w-10
+                      md:w-16
+                      h-10
+                      md:h-16
+                      font-black
+                      text-white
                       grid
                       place-items-center
-                      bg-primary
-                      left-10
-                      top-0
-                      -translate-y-1/2
+                      p-1
                     "
                   >
-                    <p class="text-7xl font-black text-white">
-                      <component :is="item.icon" />
-                    </p>
-                  </span>
-                </div>
-              </template>
-              <template #default="item">
-                <div class="flex flex-col justify-between h-full gap-5">
-                  <p
-                    class="text-secondary text-5xl"
-                    v-html="item.upperText"
-                  ></p>
-                  <hr class="bg-primary h-1 w-1/2" />
-                </div>
-              </template>
-            </Carousel>
-          </div>
+                    <component :is="item.icon" />
+                  </p>
+                </span>
+              </div>
+            </template>
+            <template #default="item">
+              <div class="flex flex-col justify-between h-full gap-5">
+                <p
+                  class="text-secondary text-3xl md:text-5xl"
+                  v-html="item.upperText"
+                ></p>
+                <hr class="bg-primary h-1 w-1/2" />
+              </div>
+            </template>
+          </Carousel>
         </div>
-      </section>
+      </div>
+    </section>
+    <template v-if="false">
       <section
         id="application-process"
         class="w-full bg-white flex flex-col items-center p-10 pb-32 gap-4"

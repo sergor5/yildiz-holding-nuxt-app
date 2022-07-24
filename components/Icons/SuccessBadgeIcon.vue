@@ -1,10 +1,5 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="57.72"
-    height="79.649"
-    viewBox="0 0 57.72 79.649"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.72 79.649">
     <path
       id="Path_29"
       data-name="Path 29"
