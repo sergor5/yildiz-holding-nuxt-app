@@ -802,7 +802,13 @@
               placeholder="Sınıf"
             />
           </div>
-          <button type="submit" class="hidden" ref="submitBtn"></button>
+          <button
+            type="submit"
+            class="hidden"
+            name="form-name"
+            value="job_application"
+            ref="submitBtn"
+          ></button>
         </form>
         <div
           class="
@@ -821,7 +827,9 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton class="whitespace-nowrap">HEMEN BAŞVUR</ActionButton>
+            <ActionButton class="whitespace-nowrap" @click.native="onSubmit"
+              >HEMEN BAŞVUR</ActionButton
+            >
           </DottedBordersWrapper>
         </div>
       </DottedBordersWrapper>
@@ -1041,7 +1049,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$refs.submitBtn.click()
+      this.$refs?.submitBtn?.click()
     },
   },
 }
