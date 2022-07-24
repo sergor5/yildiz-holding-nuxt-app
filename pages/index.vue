@@ -708,7 +708,6 @@
         <form
           name="job_application"
           method="POST"
-          action="/"
           class="mb-10"
           netlify
           ref="form"
@@ -1044,11 +1043,6 @@ export default {
         },
       ],
     }
-  },
-  methods: {
-    onSubmit() {
-      this.$refs?.submitBtn?.click()
-    },
   },
 }
 </script>
