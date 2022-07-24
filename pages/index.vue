@@ -106,7 +106,10 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton v-scroll-to="'#application-form'" class="w-full">
+            <ActionButton
+              v-scroll-to="'#application-form'"
+              class="w-full whitespace-nowrap"
+            >
               HEMEN BAŞVUR
             </ActionButton>
           </DottedBordersWrapper>
@@ -222,56 +225,81 @@
       </div>
       <Carousel :items="currentProgramItems" />
     </section>
-    <template v-if="false">
-      <section
-        id="who-can-join"
-        class="w-full bg-cover bg-center bg-no-repeat p-48"
-      >
-        <div class="flex w-3/5 mx-auto gap-6">
-          <div class="">
-            <div
-              class="
-                w-40
-                h-40
-                bg-white bg-opacity-10
-                backdrop-blur-sm
-                grid
-                place-items-center
-              "
-            >
-              <QuestionBubbleIcon class="w-24 h-24" />
-            </div>
+    <section
+      id="who-can-join"
+      class="w-full bg-cover bg-center bg-no-repeat pt-8 pb-20 lg:p-24 2xl:p-48"
+    >
+      <div class="flex flex-col w-5/6 xl:w-3/5 mx-auto text-white gap-4">
+        <div class="flex gap-4">
+          <div
+            class="
+              w-16
+              h-16
+              lg:w-40 lg:h-40
+              bg-white bg-opacity-10
+              backdrop-blur-sm
+              grid
+              place-items-center
+            "
+          >
+            <QuestionBubbleIcon class="w-9 h-9 lg:w-24 lg:h-24" />
           </div>
-          <div class="flex flex-col justify-center text-white">
-            <h2 class="text-6xl font-extrabold" style="line-height: 1.3">
-              KİMLER<br />KATILABİLİR?
-            </h2>
-            <DottedBordersWrapper
-              borderColor="border-white"
-              dotColor="bg-white"
-              class="bg-white bg-opacity-10 backdrop-blur-sm text-4xl p-10"
-            >
+          <h2
+            class="text-2xl lg:text-6xl font-extrabold"
+            style="line-height: 1.3"
+          >
+            KİMLER<br />KATILABİLİR?
+          </h2>
+        </div>
+        <div class="flex flex-col justify-center xl:ml-44">
+          <DottedBordersWrapper
+            borderColor="border-white"
+            dotColor="bg-white"
+            class="
+              bg-white bg-opacity-10
+              backdrop-blur-sm
+              text-2xl
+              lg:text-4xl
+              p-0
+            "
+          >
+            <p class="p-5 pb-10 lg:p-10">
               Üniversite 3. Sınıf, 4. Sınıf veya Yüksek Lisans programlarında
               öğrenim gören ve kariyerine parlak bir şirkette yön vermek isteyen
               öğrenciler ve yeni mezunlar.
-              <span class="absolute z-10 h-0 bottom-6 -right-32">
-                <DottedBordersWrapper
-                  dotColor="bg-white"
-                  borderColor="border-white"
-                  :borderOpacity="0.6"
-                  class="active:scale-95 transition-transform"
+            </p>
+            <span
+              class="
+                absolute
+                z-10
+                h-0
+                w-full
+                lg:w-auto
+                bottom-6
+                flex
+                justify-center
+                lg:-right-32
+              "
+            >
+              <DottedBordersWrapper
+                dotColor="bg-white"
+                borderColor="border-white"
+                :borderOpacity="0.6"
+                class="active:scale-95 transition-transform"
+                style="width: fit-content; height: fit-content"
+              >
+                <ActionButton
+                  class="whitespace-nowrap"
+                  v-scroll-to="'#application-form'"
+                  >HEMEN BAŞVUR</ActionButton
                 >
-                  <ActionButton
-                    class="whitespace-nowrap"
-                    v-scroll-to="'#application-form'"
-                    >HEMEN BAŞVUR</ActionButton
-                  >
-                </DottedBordersWrapper>
-              </span>
-            </DottedBordersWrapper>
-          </div>
+              </DottedBordersWrapper>
+            </span>
+          </DottedBordersWrapper>
         </div>
-      </section>
+      </div>
+    </section>
+    <template v-if="false">
       <section
         id="what-will-i-win"
         class="w-full bg-gray-300 bg-cover bg-center bg-no-repeat pt-32 mb-52"

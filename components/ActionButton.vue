@@ -1,12 +1,15 @@
 <template>
   <button
     class="
-      px-14
-      py-5
+      px-6
+      py-3
+      lg:px-14
+      md:py-5
       bg-primary
       text-white
       font-black
-      text-3xl
+      text-2xl
+      lg:text-3xl
       hover:bg-primary-hover
       active:bg-primary-active
       transition-all
