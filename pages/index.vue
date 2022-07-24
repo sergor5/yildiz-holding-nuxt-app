@@ -708,6 +708,7 @@
         <form
           name="job_application"
           method="POST"
+          action="/"
           class="mb-10"
           netlify
           ref="form"
@@ -801,13 +802,6 @@
               placeholder="Sınıf"
             />
           </div>
-          <input
-            type="submit"
-            class="hidden"
-            name="form-name"
-            value="job_application"
-            ref="submitBtn"
-          />
         </form>
         <div
           class="
@@ -826,7 +820,9 @@
             :borderOpacity="0.6"
             class="active:scale-95 transition-transform"
           >
-            <ActionButton class="whitespace-nowrap">HEMEN BAŞVUR</ActionButton>
+            <ActionButton class="whitespace-nowrap" @click.native="submitForm"
+              >HEMEN BAŞVUR</ActionButton
+            >
           </DottedBordersWrapper>
         </div>
       </DottedBordersWrapper>
@@ -1043,6 +1039,11 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    submitForm() {
+      document.querySelector('input[name="form-name"').click()
+    },
   },
 }
 </script>
